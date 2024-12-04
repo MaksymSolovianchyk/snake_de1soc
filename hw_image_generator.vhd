@@ -11,8 +11,10 @@ PORT (
     disp_ena : IN STD_LOGIC; -- display enable ('1' = display time, '0' = blanking time)
     row : IN INTEGER; -- row pixel coordinate
     column : IN INTEGER; -- column pixel coordinate
-        keys : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- keys for movement
+    ps2_code : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- keys for movement
+	 ps2_code_new : IN STD_LOGIC;
     clock : IN STD_LOGIC;
+	 ps2_clk : IN STD_LOGIC;
     red : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- red magnitude output
     green : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- green magnitude output
     blue : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0') -- blue magnitude output
@@ -43,8 +45,9 @@ ARCHITECTURE behavior OF hw_image_generator IS
     SIGNAL fruit_width : INTEGER := 10;
     SIGNAL fruit_height : INTEGER := 10;
     -- Direction control
-    SIGNAL direction : INTEGER RANGE 0 TO 3 := 3;
-    SIGNAL next_direction : INTEGER RANGE 0 TO 3 := 3;
+    SIGNAL direction : INTEGER RANGE 0 TO 3;
+    SIGNAL next_direction : INTEGER RANGE 0 TO 3;
+	 SIGNAL local_next_direction : INTEGER RANGE 0 TO 3;
 
     -- Score tracking
     SIGNAL score : INTEGER := 0;
@@ -54,53 +57,57 @@ ARCHITECTURE behavior OF hw_image_generator IS
 
 BEGIN
     -- Direction control logi
-PROCESS(keys)
-BEGIN
-CASE direction IS
-WHEN 0 => -- Currently moving Up
-IF keys(1) = '0' THEN
-next_direction <= direction;
-ELSIF keys(2) = '0' THEN
-next_direction <= 0;
-ELSIF keys(3) = '0' THEN
-next_direction <= 2;
-ELSIF keys(0) = '0' THEN
-next_direction <= 3;
-END IF;
-WHEN 1 => -- Currently moving Down
-IF keys(2) = '0' THEN
-next_direction <= direction;
-ELSIF keys(1) = '0' THEN
-next_direction <= 1;
-ELSIF keys(3) = '0' THEN
-next_direction <= 2;
-ELSIF keys(0) = '0' THEN
-next_direction <= 3;
-END IF;
-WHEN 2 => -- Currently moving Left
-IF keys(0) = '0' THEN
-next_direction <= direction;
-ELSIF keys(3) = '0' THEN
-next_direction <= 2;
-ELSIF keys(1) = '0' THEN
-next_direction <= 1;
-ELSIF keys(2) = '0' THEN
-next_direction <= 0;
-END IF;
-WHEN 3 => -- Currently moving Right
-IF keys(3) = '0' THEN
-next_direction <= direction;
-ELSIF keys(0) = '0' THEN
-next_direction <= 3;
-ELSIF keys(1) = '0' THEN
-next_direction <= 1;
-ELSIF keys(2) = '0' THEN
-next_direction <= 0;
-END IF;
-WHEN OTHERS =>
-next_direction <= direction;
-END CASE;
-END PROCESS;				 
+process(ps2_clk, ps2_code, ps2_code_new)
+  begin
+    if rising_edge(ps2_clk) then
+      -- Default: Maintain current direction
+      local_next_direction <= direction;
+
+      if ps2_code_new = '1' then
+        case direction is
+          -- Current direction is Up (0)
+          when 0 =>
+            if ps2_code = x"6B" then   -- Left arrow
+              local_next_direction <= 2;
+            elsif ps2_code = x"74" then -- Right arrow
+              local_next_direction <= 3;
+            end if;
+
+          -- Current direction is Down (1)
+          when 1 =>
+            if ps2_code = x"6B" then   -- Left arrow
+              local_next_direction <= 2;
+            elsif ps2_code = x"74" then -- Right arrow
+              local_next_direction <= 3;
+            end if;
+
+          -- Current direction is Left (2)
+          when 2 =>
+            if ps2_code = x"75" then   -- Up arrow
+              local_next_direction <= 0;
+            elsif ps2_code = x"72" then -- Down arrow
+              local_next_direction <= 1;
+            end if;
+
+          -- Current direction is Right (3)
+          when 3 =>
+            if ps2_code = x"75" then   -- Up arrow
+              local_next_direction <= 0;
+            elsif ps2_code = x"72" then -- Down arrow
+              local_next_direction <= 1;
+            end if;
+
+          -- Default case (should not occur)
+          when others =>
+            local_next_direction <= direction;
+        end case;
+      end if;
+
+      -- Update the next_direction output
+      next_direction <= local_next_direction;
+
+    end if;
+  end process;				 
     -- Movement and game logic
     PROCESS(clock)
     BEGIN

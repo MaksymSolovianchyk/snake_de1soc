@@ -108,19 +108,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "keys[2]",
+					"name" : "clk_in",
 					"strict" : false
 				},
 				{
-					"name" : "keys[1]",
+					"name" : "ps2clk",
 					"strict" : false
 				},
 				{
-					"name" : "keys[3]",
-					"strict" : false
-				},
-				{
-					"name" : "keys[0]",
+					"name" : "ps2data",
 					"strict" : false
 				}
 			]
