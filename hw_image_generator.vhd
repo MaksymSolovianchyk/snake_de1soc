@@ -23,10 +23,10 @@ END hw_image_generator;
 
 ARCHITECTURE behavior OF hw_image_generator IS
     -- Game area definitions
-    CONSTANT game_space_x_start : INTEGER := 10;
-    CONSTANT game_space_x_end : INTEGER := 470;
-    CONSTANT game_space_y_start : INTEGER := 10;
-    CONSTANT game_space_y_end : INTEGER := 470;
+    CONSTANT game_space_x_start : INTEGER := 0;
+    CONSTANT game_space_x_end : INTEGER := 480;
+    CONSTANT game_space_y_start : INTEGER := 0;
+    CONSTANT game_space_y_end : INTEGER := 480;
     CONSTANT wall_thickness : INTEGER := 10;
 	 
 	 CONSTANT fruit_x_bound : INTEGER := game_space_x_end - game_space_x_start - 20;
@@ -66,36 +66,33 @@ process(ps2_clk, ps2_code, ps2_code_new)
       if ps2_code_new = '1' then
         case direction is
           -- Current direction is Up (0)
-          when 0 =>
-            if ps2_code = x"6B" then   -- Left arrow
-              local_next_direction <= 2;
-            elsif ps2_code = x"74" then -- Right arrow
-              local_next_direction <= 3;
-            end if;
+				when 0 =>
+					 if ps2_code = x"6B" or ps2_code = x"41" then
+						local_next_direction <= 2;
+					 elsif ps2_code = x"74" or ps2_code = x"44" then
+						local_next_direction <= 3;
+					 end if;
 
-          -- Current direction is Down (1)
-          when 1 =>
-            if ps2_code = x"6B" then   -- Left arrow
-              local_next_direction <= 2;
-            elsif ps2_code = x"74" then -- Right arrow
-              local_next_direction <= 3;
-            end if;
+				when 1 =>
+					 if ps2_code = x"6B" or ps2_code = x"41" then
+						local_next_direction <= 2;
+					 elsif ps2_code = x"74" or ps2_code = x"44" then
+						local_next_direction <= 3;
+					 end if;
 
-          -- Current direction is Left (2)
-          when 2 =>
-            if ps2_code = x"75" then   -- Up arrow
-              local_next_direction <= 0;
-            elsif ps2_code = x"72" then -- Down arrow
-              local_next_direction <= 1;
-            end if;
+				when 2 =>
+					 if ps2_code = x"75" or ps2_code = x"57" then
+						local_next_direction <= 0;
+					 elsif ps2_code = x"72" or ps2_code = x"53" then
+						local_next_direction <= 1;
+					 end if;
 
-          -- Current direction is Right (3)
-          when 3 =>
-            if ps2_code = x"75" then   -- Up arrow
-              local_next_direction <= 0;
-            elsif ps2_code = x"72" then -- Down arrow
-              local_next_direction <= 1;
-            end if;
+				when 3 =>
+					 if ps2_code = x"75" or ps2_code = x"57" then
+						local_next_direction <= 0;
+					 elsif ps2_code = x"72" or ps2_code = x"53" then
+						local_next_direction <= 1;
+					 end if;
 
           -- Default case (should not occur)
           when others =>

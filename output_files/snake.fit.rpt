@@ -1,5 +1,5 @@
 Fitter report for snake
-Wed Dec  4 22:50:12 2024
+Wed Dec  4 23:59:29 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -67,15 +67,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Dec  4 22:50:12 2024          ;
+; Fitter Status                   ; Successful - Wed Dec  4 23:59:29 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; snake                                          ;
 ; Top-level Entity Name           ; snake                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 2,271 / 32,070 ( 7 % )                         ;
-; Total registers                 ; 292                                            ;
+; Logic utilization (in ALMs)     ; 2,269 / 32,070 ( 7 % )                         ;
+; Total registers                 ; 290                                            ;
 ; Total pins                      ; 32 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -157,95 +157,93 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.21        ;
+; Average used               ; 1.22        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.3%      ;
-;     Processor 3            ;   6.1%      ;
-;     Processor 4            ;   6.0%      ;
+;     Processor 2            ;   6.4%      ;
+;     Processor 3            ;   6.2%      ;
+;     Processor 4            ;   6.1%      ;
 ;     Processor 5            ;   1.5%      ;
 ;     Processor 6            ;   1.5%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                                          ;
-+------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------+------------------+-----------------------+
-; Node                                                                                     ; Action          ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                ; Destination Port ; Destination Port Name ;
-+------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------+------------------+-----------------------+
-; clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; Created         ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                 ;                  ;                       ;
-; clk_in~inputCLKENA0                                                                      ; Created         ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                 ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[18]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[18]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[18]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[19]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[19]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[19]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[20]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[20]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[20]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[21]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[21]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[21]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[22]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[22]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[22]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[23]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[23]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[23]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[24]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[24]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[24]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[25]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[25]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[25]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[26]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[26]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[26]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[27]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[27]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[27]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[28]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[28]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[28]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[29]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[29]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[29]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[30]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[30]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[30]~_Duplicate_1          ; Q                ;                       ;
-; hw_image_generator:inst10|random_seed[31]                                                ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|Mult0~mult_hlmac                      ; AY               ;                       ;
-; hw_image_generator:inst10|random_seed[31]                                                ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst10|random_seed[31]~_Duplicate_1          ; Q                ;                       ;
-; Clock_Divider:inst4|count[3]                                                             ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[3]~DUPLICATE                          ;                  ;                       ;
-; Clock_Divider:inst4|count[15]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[15]~DUPLICATE                         ;                  ;                       ;
-; Clock_Divider:inst4|count[17]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[17]~DUPLICATE                         ;                  ;                       ;
-; Clock_Divider:inst4|count[21]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[21]~DUPLICATE                         ;                  ;                       ;
-; Clock_Divider:inst4|count[22]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[22]~DUPLICATE                         ;                  ;                       ;
-; hw_image_generator:inst10|fruit_x_start[7]                                               ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|fruit_x_start[7]~DUPLICATE            ;                  ;                       ;
-; hw_image_generator:inst10|fruit_x_start[9]                                               ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|fruit_x_start[9]~DUPLICATE            ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[1]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[1]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[2]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[2]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[3]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[3]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[4]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[4]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[5]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[5]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[6]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[6]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[7]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[7]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[8]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[8]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[9]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[9]~DUPLICATE              ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[10]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[10]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[11]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[11]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[12]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[12]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[13]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[13]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[15]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[15]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[16]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[16]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[17]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[17]~DUPLICATE             ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[24]~_Duplicate_1                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[24]~_Duplicate_1DUPLICATE ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[25]~_Duplicate_1                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[25]~_Duplicate_1DUPLICATE ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[26]~_Duplicate_1                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[26]~_Duplicate_1DUPLICATE ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[29]~_Duplicate_1                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[29]~_Duplicate_1DUPLICATE ;                  ;                       ;
-; hw_image_generator:inst10|random_seed[30]~_Duplicate_1                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|random_seed[30]~_Duplicate_1DUPLICATE ;                  ;                       ;
-; hw_image_generator:inst10|snake_y[0][5]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst10|snake_y[0][5]~DUPLICATE               ;                  ;                       ;
-; ps2_keyboard:inst7|ps2_word[3]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[3]~DUPLICATE                        ;                  ;                       ;
-; ps2_keyboard:inst7|ps2_word[4]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[4]~DUPLICATE                        ;                  ;                       ;
-; ps2_keyboard:inst7|ps2_word[6]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[6]~DUPLICATE                        ;                  ;                       ;
-; ps2_keyboard:inst7|ps2_word[7]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[7]~DUPLICATE                        ;                  ;                       ;
-; ps2_keyboard:inst7|ps2_word[9]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[9]~DUPLICATE                        ;                  ;                       ;
-; vga_controller:inst|column[1]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[1]~DUPLICATE                         ;                  ;                       ;
-; vga_controller:inst|column[3]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[3]~DUPLICATE                         ;                  ;                       ;
-; vga_controller:inst|column[5]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[5]~DUPLICATE                         ;                  ;                       ;
-; vga_controller:inst|column[6]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[6]~DUPLICATE                         ;                  ;                       ;
-; vga_controller:inst|column[9]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[9]~DUPLICATE                         ;                  ;                       ;
-; vga_controller:inst|row[31]                                                              ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|row[31]~DUPLICATE                           ;                  ;                       ;
-+------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------------+------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                                         ;
++------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------------+------------------+-----------------------+
+; Node                                                                                     ; Action          ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                               ; Destination Port ; Destination Port Name ;
++------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------------+------------------+-----------------------+
+; clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|outclk_wire[0]~CLKENA0 ; Created         ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                ;                  ;                       ;
+; clk_in~inputCLKENA0                                                                      ; Created         ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[18]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[18]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[18]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[19]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[19]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[19]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[20]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[20]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[20]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[21]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[21]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[21]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[22]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[22]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[22]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[23]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[23]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[23]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[24]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[24]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[24]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[25]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[25]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[25]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[26]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[26]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[26]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[27]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[27]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[27]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[28]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[28]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[28]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[29]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[29]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[29]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[30]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[30]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[30]~_Duplicate_1          ; Q                ;                       ;
+; hw_image_generator:inst1|random_seed[31]                                                 ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|Mult0~mult_hlmac                      ; AY               ;                       ;
+; hw_image_generator:inst1|random_seed[31]                                                 ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; hw_image_generator:inst1|random_seed[31]~_Duplicate_1          ; Q                ;                       ;
+; Clock_Divider:inst4|count[1]                                                             ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[1]~DUPLICATE                         ;                  ;                       ;
+; Clock_Divider:inst4|count[3]                                                             ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[3]~DUPLICATE                         ;                  ;                       ;
+; Clock_Divider:inst4|count[7]                                                             ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[7]~DUPLICATE                         ;                  ;                       ;
+; Clock_Divider:inst4|count[9]                                                             ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[9]~DUPLICATE                         ;                  ;                       ;
+; Clock_Divider:inst4|count[11]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[11]~DUPLICATE                        ;                  ;                       ;
+; Clock_Divider:inst4|count[13]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[13]~DUPLICATE                        ;                  ;                       ;
+; Clock_Divider:inst4|count[15]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Clock_Divider:inst4|count[15]~DUPLICATE                        ;                  ;                       ;
+; hw_image_generator:inst1|fruit_x_start[3]                                                ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|fruit_x_start[3]~DUPLICATE            ;                  ;                       ;
+; hw_image_generator:inst1|fruit_y_start[18]                                               ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|fruit_y_start[18]~DUPLICATE           ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[1]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[1]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[2]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[2]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[3]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[3]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[5]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[5]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[6]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[6]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[7]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[7]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[8]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[8]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[9]                                                  ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[9]~DUPLICATE              ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[12]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[12]~DUPLICATE             ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[13]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[13]~DUPLICATE             ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[15]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[15]~DUPLICATE             ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[16]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[16]~DUPLICATE             ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[17]                                                 ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[17]~DUPLICATE             ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[24]~_Duplicate_1                                    ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[24]~_Duplicate_1DUPLICATE ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[26]~_Duplicate_1                                    ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[26]~_Duplicate_1DUPLICATE ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[29]~_Duplicate_1                                    ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[29]~_Duplicate_1DUPLICATE ;                  ;                       ;
+; hw_image_generator:inst1|random_seed[30]~_Duplicate_1                                    ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|random_seed[30]~_Duplicate_1DUPLICATE ;                  ;                       ;
+; hw_image_generator:inst1|snake_x[0][2]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_x[0][2]~DUPLICATE               ;                  ;                       ;
+; hw_image_generator:inst1|snake_x[0][5]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_x[0][5]~DUPLICATE               ;                  ;                       ;
+; hw_image_generator:inst1|snake_x[0][7]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_x[0][7]~DUPLICATE               ;                  ;                       ;
+; hw_image_generator:inst1|snake_y[0][3]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_y[0][3]~DUPLICATE               ;                  ;                       ;
+; hw_image_generator:inst1|snake_y[0][7]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_y[0][7]~DUPLICATE               ;                  ;                       ;
+; hw_image_generator:inst1|snake_y[0][8]                                                   ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; hw_image_generator:inst1|snake_y[0][8]~DUPLICATE               ;                  ;                       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_data|result                                     ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|debounce:debounce_ps2_data|result~DUPLICATE ;                  ;                       ;
+; ps2_keyboard:inst7|ps2_word[7]                                                           ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_keyboard:inst7|ps2_word[7]~DUPLICATE                       ;                  ;                       ;
+; vga_controller:inst|column[4]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[4]~DUPLICATE                        ;                  ;                       ;
+; vga_controller:inst|column[7]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[7]~DUPLICATE                        ;                  ;                       ;
+; vga_controller:inst|column[8]                                                            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|column[8]~DUPLICATE                        ;                  ;                       ;
+; vga_controller:inst|row[9]                                                               ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_controller:inst|row[9]~DUPLICATE                           ;                  ;                       ;
++------------------------------------------------------------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------------------+------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -266,8 +264,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 4716 ) ; 0.00 % ( 0 / 4716 )        ; 0.00 % ( 0 / 4716 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 4716 ) ; 0.00 % ( 0 / 4716 )        ; 0.00 % ( 0 / 4716 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 4714 ) ; 0.00 % ( 0 / 4714 )        ; 0.00 % ( 0 / 4714 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 4714 ) ; 0.00 % ( 0 / 4714 )        ; 0.00 % ( 0 / 4714 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -290,7 +288,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 4706 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 4704 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -306,14 +304,14 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 +-------------------------------------------------------------+-----------------------+-------+
 ; Resource                                                    ; Usage                 ; %     ;
 +-------------------------------------------------------------+-----------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 2,271 / 32,070        ; 7 %   ;
-; ALMs needed [=A-B+C]                                        ; 2,271                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 2,301 / 32,070        ; 7 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 91                    ;       ;
-;         [b] ALMs used for LUT logic                         ; 2,174                 ;       ;
-;         [c] ALMs used for registers                         ; 36                    ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 2,269 / 32,070        ; 7 %   ;
+; ALMs needed [=A-B+C]                                        ; 2,269                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 2,294 / 32,070        ; 7 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 88                    ;       ;
+;         [b] ALMs used for LUT logic                         ; 2,167                 ;       ;
+;         [c] ALMs used for registers                         ; 39                    ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 42 / 32,070           ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 37 / 32,070           ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 12 / 32,070           ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                     ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ;       ;
@@ -322,25 +320,25 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 ;                                                             ;                       ;       ;
 ; Difficulty packing design                                   ; Low                   ;       ;
 ;                                                             ;                       ;       ;
-; Total LABs:  partially or completely used                   ; 301 / 3,207           ; 9 %   ;
-;     -- Logic LABs                                           ; 301                   ;       ;
+; Total LABs:  partially or completely used                   ; 299 / 3,207           ; 9 %   ;
+;     -- Logic LABs                                           ; 299                   ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ;       ;
 ;                                                             ;                       ;       ;
-; Combinational ALUT usage for logic                          ; 4,394                 ;       ;
+; Combinational ALUT usage for logic                          ; 4,392                 ;       ;
 ;     -- 7 input functions                                    ; 0                     ;       ;
 ;     -- 6 input functions                                    ; 115                   ;       ;
-;     -- 5 input functions                                    ; 109                   ;       ;
-;     -- 4 input functions                                    ; 1,206                 ;       ;
-;     -- <=3 input functions                                  ; 2,964                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 39                    ;       ;
+;     -- 5 input functions                                    ; 105                   ;       ;
+;     -- 4 input functions                                    ; 1,179                 ;       ;
+;     -- <=3 input functions                                  ; 2,993                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 37                    ;       ;
 ;                                                             ;                       ;       ;
-; Dedicated logic registers                                   ; 292                   ;       ;
+; Dedicated logic registers                                   ; 290                   ;       ;
 ;     -- By type:                                             ;                       ;       ;
 ;         -- Primary logic registers                          ; 252 / 64,140          ; < 1 % ;
-;         -- Secondary logic registers                        ; 40 / 64,140           ; < 1 % ;
+;         -- Secondary logic registers                        ; 38 / 64,140           ; < 1 % ;
 ;     -- By function:                                         ;                       ;       ;
 ;         -- Design implementation registers                  ; 252                   ;       ;
-;         -- Routing optimization registers                   ; 40                    ;       ;
+;         -- Routing optimization registers                   ; 38                    ;       ;
 ;                                                             ;                       ;       ;
 ; Virtual pins                                                ; 0                     ;       ;
 ; I/O pins                                                    ; 32 / 457              ; 7 %   ;
@@ -395,12 +393,12 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 ; Oscillator blocks                                           ; 0 / 1                 ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4                 ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2                 ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 1.8% / 1.8% / 2.0%    ;       ;
-; Peak interconnect usage (total/H/V)                         ; 14.6% / 14.1% / 17.5% ;       ;
-; Maximum fan-out                                             ; 138                   ;       ;
-; Highest non-global fan-out                                  ; 138                   ;       ;
-; Total fan-out                                               ; 15036                 ;       ;
-; Average fan-out                                             ; 3.13                  ;       ;
+; Average interconnect usage (total/H/V)                      ; 1.8% / 1.8% / 1.8%    ;       ;
+; Peak interconnect usage (total/H/V)                         ; 18.3% / 17.9% / 19.4% ;       ;
+; Maximum fan-out                                             ; 139                   ;       ;
+; Highest non-global fan-out                                  ; 139                   ;       ;
+; Total fan-out                                               ; 14944                 ;       ;
+; Average fan-out                                             ; 3.12                  ;       ;
 +-------------------------------------------------------------+-----------------------+-------+
 
 
@@ -409,14 +407,14 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 2271 / 32070 ( 7 % )  ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 2271                  ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 2301 / 32070 ( 7 % )  ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 91                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 2174                  ; 0                              ;
-;         [c] ALMs used for registers                         ; 36                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 2269 / 32070 ( 7 % )  ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 2269                  ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 2294 / 32070 ( 7 % )  ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 88                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 2167                  ; 0                              ;
+;         [c] ALMs used for registers                         ; 39                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 42 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 37 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 12 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -425,17 +423,17 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 301 / 3207 ( 9 % )    ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 301                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 299 / 3207 ( 9 % )    ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 299                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 4394                  ; 0                              ;
+; Combinational ALUT usage for logic                          ; 4392                  ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
 ;     -- 6 input functions                                    ; 115                   ; 0                              ;
-;     -- 5 input functions                                    ; 109                   ; 0                              ;
-;     -- 4 input functions                                    ; 1206                  ; 0                              ;
-;     -- <=3 input functions                                  ; 2964                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 39                    ; 0                              ;
+;     -- 5 input functions                                    ; 105                   ; 0                              ;
+;     -- 4 input functions                                    ; 1179                  ; 0                              ;
+;     -- <=3 input functions                                  ; 2993                  ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 37                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
@@ -443,10 +441,10 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 252 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 40 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 38 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 252                   ; 0                              ;
-;         -- Routing optimization registers                   ; 40                    ; 0                              ;
+;         -- Routing optimization registers                   ; 38                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -462,18 +460,18 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 ; PLL Reference Clock Select Block                            ; 0 / 6 ( 0 % )         ; 1 / 6 ( 16 % )                 ;
 ;                                                             ;                       ;                                ;
 ; Connections                                                 ;                       ;                                ;
-;     -- Input Connections                                    ; 140                   ; 0                              ;
-;     -- Registered Input Connections                         ; 140                   ; 0                              ;
-;     -- Output Connections                                   ; 0                     ; 140                            ;
+;     -- Input Connections                                    ; 141                   ; 0                              ;
+;     -- Registered Input Connections                         ; 141                   ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 141                            ;
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 15178                 ; 175                            ;
-;     -- Registered Connections                               ; 1123                  ; 0                              ;
+;     -- Total Connections                                    ; 15026                 ; 176                            ;
+;     -- Registered Connections                               ; 1105                  ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
-;     -- Top                                                  ; 0                     ; 140                            ;
-;     -- hard_block:auto_generated_inst                       ; 140                   ; 0                              ;
+;     -- Top                                                  ; 0                     ; 141                            ;
+;     -- hard_block:auto_generated_inst                       ; 141                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 3                     ; 1                              ;
@@ -501,7 +499,7 @@ The pin-out file can be found in D:/QUARTUS_ESv1/output_files/snake.pin.
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk_in  ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 52                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk_in  ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 53                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; ps2clk  ; AD7   ; 3A       ; 6            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; ps2data ; AE7   ; 3A       ; 6            ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
@@ -1560,42 +1558,42 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node               ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name        ; Library Name ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |snake                                   ; 2271.0 (0.5)         ; 2299.5 (0.5)                     ; 40.0 (0.0)                                        ; 11.5 (0.0)                       ; 0.0 (0.0)            ; 4394 (1)            ; 292 (0)                   ; 0 (0)         ; 0                 ; 0     ; 2          ; 32   ; 0            ; |snake                                                                                                                        ; snake              ; work         ;
-;    |Clock_Divider:inst4|                 ; 23.5 (23.5)          ; 24.0 (24.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 38 (38)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|Clock_Divider:inst4                                                                                                    ; Clock_Divider      ; work         ;
-;    |clock50to25:inst3|                   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3                                                                                                      ; clock50to25        ; clock50to25  ;
-;       |clock50to25_pll_0:pll_0|          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0                                                                              ; clock50to25_pll_0  ; clock50to25  ;
-;          |altera_pll:altera_pll_i|       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i                                                      ; altera_pll         ; work         ;
-;    |hw_image_generator:inst10|           ; 2189.3 (316.6)       ; 2205.1 (331.8)                   ; 26.7 (21.1)                                       ; 11.0 (6.0)                       ; 0.0 (0.0)            ; 4262 (558)          ; 140 (140)                 ; 0 (0)         ; 0                 ; 0     ; 2          ; 0    ; 0            ; |snake|hw_image_generator:inst10                                                                                              ; hw_image_generator ; work         ;
-;       |lpm_divide:Div0|                  ; 253.5 (0.0)          ; 254.4 (0.0)                      ; 0.9 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_bpo:auto_generated| ; 253.5 (0.0)          ; 254.4 (0.0)                      ; 0.9 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
-;             |abs_divider_kbg:divider|    ; 253.5 (28.5)         ; 254.4 (28.9)                     ; 0.9 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (59)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
-;                |alt_u_div_ove:divider|   ; 209.0 (209.0)        ; 209.5 (209.5)                    ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 419 (419)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Div1|                  ; 253.7 (0.0)          ; 256.3 (0.0)                      ; 2.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_bpo:auto_generated| ; 253.7 (0.0)          ; 256.3 (0.0)                      ; 2.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
-;             |abs_divider_kbg:divider|    ; 253.7 (28.2)         ; 256.3 (28.8)                     ; 2.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 510 (59)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
-;                |alt_u_div_ove:divider|   ; 209.5 (209.5)        ; 211.5 (211.5)                    ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 419 (419)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Mod0|                  ; 683.0 (0.0)          ; 682.5 (0.0)                      ; 2.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_uio:auto_generated| ; 683.0 (0.0)          ; 682.5 (0.0)                      ; 2.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
-;             |abs_divider_4dg:divider|    ; 683.0 (41.0)         ; 682.5 (42.0)                     ; 2.0 (1.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (61)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
-;                |alt_u_div_o2f:divider|   ; 626.0 (626.0)        ; 624.5 (624.5)                    ; 1.0 (1.0)                                         ; 2.5 (2.5)                        ; 0.0 (0.0)            ; 1249 (1249)         ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Mod1|                  ; 682.5 (0.0)          ; 680.0 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_uio:auto_generated| ; 682.5 (0.0)          ; 680.0 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
-;             |abs_divider_4dg:divider|    ; 682.5 (39.5)         ; 680.0 (39.5)                     ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (61)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
-;                |alt_u_div_o2f:divider|   ; 626.5 (626.5)        ; 624.5 (624.5)                    ; 0.5 (0.5)                                         ; 2.5 (2.5)                        ; 0.0 (0.0)            ; 1249 (1249)         ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;    |ps2_keyboard:inst7|                  ; 25.6 (12.6)          ; 34.1 (18.1)                      ; 8.5 (5.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 44 (18)             ; 63 (39)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7                                                                                                     ; ps2_keyboard       ; work         ;
-;       |debounce:debounce_ps2_clk|        ; 6.5 (6.5)            ; 8.0 (8.0)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_clk                                                                           ; debounce           ; work         ;
-;       |debounce:debounce_ps2_data|       ; 6.5 (6.5)            ; 8.0 (8.0)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_data                                                                          ; debounce           ; work         ;
-;    |vga_controller:inst|                 ; 32.1 (32.1)          ; 35.8 (35.8)                      ; 4.2 (4.2)                                         ; 0.5 (0.5)                        ; 0.0 (0.0)            ; 46 (46)             ; 51 (51)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|vga_controller:inst                                                                                                    ; vga_controller     ; work         ;
-+------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node               ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name        ; Library Name ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
+; |snake                                   ; 2269.0 (0.5)         ; 2292.5 (0.5)                     ; 35.0 (0.0)                                        ; 11.5 (0.0)                       ; 0.0 (0.0)            ; 4392 (1)            ; 290 (0)                   ; 0 (0)         ; 0                 ; 0     ; 2          ; 32   ; 0            ; |snake                                                                                                                       ; snake              ; work         ;
+;    |Clock_Divider:inst4|                 ; 23.5 (23.5)          ; 24.0 (24.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 40 (40)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|Clock_Divider:inst4                                                                                                   ; Clock_Divider      ; work         ;
+;    |clock50to25:inst3|                   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3                                                                                                     ; clock50to25        ; clock50to25  ;
+;       |clock50to25_pll_0:pll_0|          ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0                                                                             ; clock50to25_pll_0  ; clock50to25  ;
+;          |altera_pll:altera_pll_i|       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i                                                     ; altera_pll         ; work         ;
+;    |hw_image_generator:inst1|            ; 2187.7 (307.9)       ; 2199.6 (325.9)                   ; 22.9 (23.5)                                       ; 11.0 (5.5)                       ; 0.0 (0.0)            ; 4260 (550)          ; 141 (141)                 ; 0 (0)         ; 0                 ; 0     ; 2          ; 0    ; 0            ; |snake|hw_image_generator:inst1                                                                                              ; hw_image_generator ; work         ;
+;       |lpm_divide:Div0|                  ; 254.0 (0.0)          ; 254.0 (0.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 513 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_bpo:auto_generated| ; 254.0 (0.0)          ; 254.0 (0.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 513 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
+;             |abs_divider_kbg:divider|    ; 254.0 (28.5)         ; 254.0 (28.5)                     ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 513 (62)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
+;                |alt_u_div_ove:divider|   ; 209.5 (209.5)        ; 209.5 (209.5)                    ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 419 (419)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Div1|                  ; 256.5 (0.0)          ; 257.7 (0.0)                      ; 1.7 (0.0)                                         ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 513 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div1                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_bpo:auto_generated| ; 256.5 (0.0)          ; 257.7 (0.0)                      ; 1.7 (0.0)                                         ; 0.5 (0.0)                        ; 0.0 (0.0)            ; 513 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
+;             |abs_divider_kbg:divider|    ; 256.5 (31.0)         ; 257.7 (30.5)                     ; 1.7 (0.0)                                         ; 0.5 (0.5)                        ; 0.0 (0.0)            ; 513 (62)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
+;                |alt_u_div_ove:divider|   ; 209.3 (209.3)        ; 211.2 (211.2)                    ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 419 (419)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Mod0|                  ; 683.0 (0.0)          ; 680.5 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod0                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_uio:auto_generated| ; 683.0 (0.0)          ; 680.5 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
+;             |abs_divider_4dg:divider|    ; 683.0 (41.0)         ; 680.5 (41.0)                     ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (62)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
+;                |alt_u_div_o2f:divider|   ; 626.0 (626.0)        ; 623.5 (623.5)                    ; 0.0 (0.0)                                         ; 2.5 (2.5)                        ; 0.0 (0.0)            ; 1248 (1248)         ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Mod1|                  ; 684.0 (0.0)          ; 681.5 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod1                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_uio:auto_generated| ; 684.0 (0.0)          ; 681.5 (0.0)                      ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (0)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod1|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
+;             |abs_divider_4dg:divider|    ; 684.0 (41.5)         ; 681.5 (41.5)                     ; 0.0 (0.0)                                         ; 2.5 (0.0)                        ; 0.0 (0.0)            ; 1342 (62)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
+;                |alt_u_div_o2f:divider|   ; 626.0 (626.0)        ; 624.0 (624.0)                    ; 0.5 (0.5)                                         ; 2.5 (2.5)                        ; 0.0 (0.0)            ; 1248 (1248)         ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst1|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;    |ps2_keyboard:inst7|                  ; 25.1 (12.1)          ; 34.6 (18.6)                      ; 9.5 (6.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 44 (18)             ; 60 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7                                                                                                    ; ps2_keyboard       ; work         ;
+;       |debounce:debounce_ps2_clk|        ; 6.5 (6.5)            ; 8.0 (8.0)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_clk                                                                          ; debounce           ; work         ;
+;       |debounce:debounce_ps2_data|       ; 6.5 (6.5)            ; 8.0 (8.0)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_data                                                                         ; debounce           ; work         ;
+;    |vga_controller:inst|                 ; 32.2 (32.2)          ; 33.8 (33.8)                      ; 2.1 (2.1)                                         ; 0.5 (0.5)                        ; 0.0 (0.0)            ; 46 (46)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |snake|vga_controller:inst                                                                                                   ; vga_controller     ; work         ;
++------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1633,7 +1631,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; red[2]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; red[1]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; red[0]    ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; clk_in    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; clk_in    ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ps2clk    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ps2data   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1645,7 +1643,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                        ; Pad To Core Index ; Setting ;
 +------------------------------------------------------------+-------------------+---------+
 ; clk_in                                                     ;                   ;         ;
-;      - ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 0                 ; 0       ;
+;      - ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 1                 ; 0       ;
 ; ps2clk                                                     ;                   ;         ;
 ;      - ps2_keyboard:inst7|sync_ffs[0]~feeder               ; 0                 ; 0       ;
 ; ps2data                                                    ;                   ;         ;
@@ -1658,25 +1656,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------+---------------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                             ; Location                  ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------+---------------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Clock_Divider:inst4|Equal0~6                                                     ; LABCELL_X35_Y59_N12       ; 37      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; Clock_Divider:inst4|tmp                                                          ; FF_X24_Y66_N14            ; 138     ; Clock                   ; no     ; --                   ; --               ; --                        ;
+; Clock_Divider:inst4|Equal0~6                                                     ; LABCELL_X29_Y62_N36       ; 39      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; Clock_Divider:inst4|tmp                                                          ; FF_X24_Y67_N56            ; 139     ; Clock                   ; no     ; --                   ; --               ; --                        ;
 ; clk_in                                                                           ; PIN_AF14                  ; 3       ; Clock                   ; no     ; --                   ; --               ; --                        ;
-; clk_in                                                                           ; PIN_AF14                  ; 50      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; clk_in                                                                           ; PIN_AF14                  ; 51      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y5_N1 ; 90      ; Clock                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; hw_image_generator:inst10|process_1~17                                           ; LABCELL_X23_Y67_N51       ; 118     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; hw_image_generator:inst10|snake_x[0][1]~7                                        ; LABCELL_X23_Y65_N24       ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; hw_image_generator:inst10|snake_y[0][8]~7                                        ; MLABCELL_X25_Y66_N54      ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|count_idle[10]~0                                              ; LABCELL_X27_Y54_N24       ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_set                         ; LABCELL_X27_Y35_N12       ; 9       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                              ; FF_X27_Y53_N53            ; 30      ; Clock, Sync. clear      ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result~1                            ; LABCELL_X27_Y35_N0        ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_data|counter_set                        ; MLABCELL_X25_Y54_N15      ; 9       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_data|result~1                           ; MLABCELL_X25_Y54_N18      ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; ps2_keyboard:inst7|process_2~0                                                   ; LABCELL_X27_Y57_N6        ; 9       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; vga_controller:inst|LessThan0~3                                                  ; LABCELL_X27_Y68_N33       ; 49      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; vga_controller:inst|LessThan6~0                                                  ; MLABCELL_X25_Y74_N42      ; 17      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; vga_controller:inst|LessThan7~0                                                  ; LABCELL_X27_Y68_N18       ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; vga_controller:inst|v_count~3                                                    ; LABCELL_X27_Y68_N54       ; 23      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; hw_image_generator:inst1|process_1~17                                            ; LABCELL_X24_Y69_N51       ; 114     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|count_idle[10]~0                                              ; LABCELL_X17_Y57_N54       ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_set                         ; LABCELL_X18_Y43_N24       ; 9       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                              ; FF_X19_Y59_N11            ; 26      ; Clock, Sync. clear      ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result~1                            ; LABCELL_X18_Y43_N18       ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_data|counter_set                        ; LABCELL_X17_Y61_N6        ; 9       ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_data|result~1                           ; LABCELL_X17_Y61_N0        ; 8       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; ps2_keyboard:inst7|process_2~0                                                   ; LABCELL_X18_Y61_N54       ; 9       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; vga_controller:inst|LessThan0~3                                                  ; LABCELL_X24_Y64_N45       ; 48      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; vga_controller:inst|LessThan6~0                                                  ; LABCELL_X24_Y66_N42       ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; vga_controller:inst|LessThan7~0                                                  ; LABCELL_X24_Y64_N18       ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; vga_controller:inst|v_count~3                                                    ; LABCELL_X24_Y64_N30       ; 24      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------------+---------------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1685,7 +1681,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                                             ; Location                  ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
-; clk_in                                                                           ; PIN_AF14                  ; 50      ; Global Clock         ; GCLK4            ; --                        ;
+; clk_in                                                                           ; PIN_AF14                  ; 51      ; Global Clock         ; GCLK4            ; --                        ;
 ; clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|outclk_wire[0] ; PLLOUTPUTCOUNTER_X0_Y5_N1 ; 90      ; Global Clock         ; GCLK6            ; --                        ;
 +----------------------------------------------------------------------------------+---------------------------+---------+----------------------+------------------+---------------------------+
 
@@ -1704,14 +1700,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; DSP Block Details                                                                                                                                                                                                                                                                                                                                                                                                                          ;
-+--------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
-; Name                                       ; Mode                      ; Location       ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
-+--------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
-; hw_image_generator:inst10|Mult0~mult_hlmac ; Independent 18x18 plus 36 ; DSP_X20_Y69_N0 ; Mixed               ; no                     ; yes                    ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-; hw_image_generator:inst10|Mult0~327        ; Two Independent 18x18     ; DSP_X20_Y67_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
-+--------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; DSP Block Details                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
+; Name                                      ; Mode                      ; Location       ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
++-------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
+; hw_image_generator:inst1|Mult0~mult_hlmac ; Independent 18x18 plus 36 ; DSP_X20_Y67_N0 ; Mixed               ; no                     ; yes                    ; --                     ; no                     ; no                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; hw_image_generator:inst1|Mult0~327        ; Two Independent 18x18     ; DSP_X20_Y65_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
++-------------------------------------------+---------------------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1719,14 +1715,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+---------------------------+
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Block interconnects                         ; 7,223 / 289,320 ( 2 % )   ;
-; C12 interconnects                           ; 71 / 13,420 ( < 1 % )     ;
-; C2 interconnects                            ; 2,910 / 119,108 ( 2 % )   ;
-; C4 interconnects                            ; 1,308 / 56,300 ( 2 % )    ;
+; Block interconnects                         ; 7,213 / 289,320 ( 2 % )   ;
+; C12 interconnects                           ; 52 / 13,420 ( < 1 % )     ;
+; C2 interconnects                            ; 2,701 / 119,108 ( 2 % )   ;
+; C4 interconnects                            ; 1,062 / 56,300 ( 2 % )    ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 1,137 / 289,320 ( < 1 % ) ;
+; Direct links                                ; 1,149 / 289,320 ( < 1 % ) ;
 ; Global clocks                               ; 2 / 16 ( 13 % )           ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -1782,13 +1778,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 1,766 / 84,580 ( 2 % )    ;
+; Local interconnects                         ; 1,744 / 84,580 ( 2 % )    ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 191 / 12,676 ( 2 % )      ;
-; R14/C12 interconnect drivers                ; 256 / 20,720 ( 1 % )      ;
-; R3 interconnects                            ; 3,285 / 130,992 ( 3 % )   ;
-; R6 interconnects                            ; 3,441 / 266,960 ( 1 % )   ;
-; Spine clocks                                ; 9 / 360 ( 3 % )           ;
+; R14 interconnects                           ; 213 / 12,676 ( 2 % )      ;
+; R14/C12 interconnect drivers                ; 259 / 20,720 ( 1 % )      ;
+; R3 interconnects                            ; 3,081 / 130,992 ( 2 % )   ;
+; R6 interconnects                            ; 4,107 / 266,960 ( 2 % )   ;
+; Spine clocks                                ; 6 / 360 ( 2 % )           ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
 
@@ -1935,125 +1931,125 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                                    ; Destination Clock(s)                                               ; Delay Added in ns ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; clk_in                                                             ; 41.2              ;
-; Clock_Divider:inst4|tmp                                            ; Clock_Divider:inst4|tmp                                            ; 27.1              ;
-; clk_in                                                             ; clk_in                                                             ; 18.7              ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 11.7              ;
-; Clock_Divider:inst4|tmp                                            ; clk_in                                                             ; 9.4               ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 9.0               ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; Clock_Divider:inst4|tmp                                            ; 4.0               ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; clk_in                                                             ; 42.2              ;
+; clk_in                                                             ; clk_in                                                             ; 20.0              ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.7              ;
+; Clock_Divider:inst4|tmp                                            ; Clock_Divider:inst4|tmp                                            ; 17.5              ;
+; Clock_Divider:inst4|tmp                                            ; clk_in                                                             ; 9.1               ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 8.8               ;
+; clk_in,Clock_Divider:inst4|tmp                                     ; clk_in                                                             ; 5.8               ;
 ; clk_in,ps2_keyboard:inst7|debounce:debounce_ps2_clk|result         ; clk_in                                                             ; 3.9               ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                  ;
-+-------------------------------------------------------------+--------------------------------------------------------------+-------------------+
-; Source Register                                             ; Destination Register                                         ; Delay Added in ns ;
-+-------------------------------------------------------------+--------------------------------------------------------------+-------------------+
-; Clock_Divider:inst4|tmp                                     ; Clock_Divider:inst4|tmp                                      ; 10.720            ;
-; Clock_Divider:inst4|count[31]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[30]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[28]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[29]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[27]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[26]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[25]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[23]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[22]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[21]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[20]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[19]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[18]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[24]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[16]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[15]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[14]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[13]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[12]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[11]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[10]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[9]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[8]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[17]                               ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[6]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[5]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[4]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[3]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[2]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[1]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[0]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; Clock_Divider:inst4|count[7]                                ; Clock_Divider:inst4|tmp                                      ; 5.360             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result         ; ps2_keyboard:inst7|count_idle[6]                             ; 4.608             ;
-; ps2_keyboard:inst7|ps2_word[1]                              ; ps2_keyboard:inst7|ps2_code[0]                               ; 3.548             ;
-; ps2_keyboard:inst7|ps2_word[2]                              ; ps2_keyboard:inst7|ps2_code[1]                               ; 3.512             ;
-; ps2_keyboard:inst7|ps2_word[8]                              ; ps2_keyboard:inst7|ps2_code[7]                               ; 3.512             ;
-; ps2_keyboard:inst7|ps2_word[3]                              ; ps2_keyboard:inst7|ps2_code[2]                               ; 3.509             ;
-; ps2_keyboard:inst7|ps2_word[5]                              ; ps2_keyboard:inst7|ps2_code[4]                               ; 3.503             ;
-; ps2_keyboard:inst7|ps2_word[4]                              ; ps2_keyboard:inst7|ps2_code[3]                               ; 3.498             ;
-; ps2_keyboard:inst7|ps2_word[6]                              ; ps2_keyboard:inst7|ps2_code[5]                               ; 3.498             ;
-; ps2_keyboard:inst7|ps2_word[7]                              ; ps2_keyboard:inst7|ps2_code[6]                               ; 3.498             ;
-; ps2_keyboard:inst7|ps2_word[0]                              ; ps2_keyboard:inst7|ps2_code_new                              ; 3.362             ;
-; ps2_keyboard:inst7|ps2_word[9]                              ; ps2_keyboard:inst7|ps2_code_new                              ; 3.099             ;
-; ps2_keyboard:inst7|ps2_word[10]                             ; ps2_keyboard:inst7|ps2_code_new                              ; 3.083             ;
-; hw_image_generator:inst10|snake_x[0][2]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.937             ;
-; hw_image_generator:inst10|snake_x[0][3]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.937             ;
-; hw_image_generator:inst10|snake_x[0][1]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.937             ;
-; hw_image_generator:inst10|direction[1]                      ; hw_image_generator:inst10|local_next_direction[0]            ; 2.834             ;
-; hw_image_generator:inst10|snake_y[0][8]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.656             ;
-; hw_image_generator:inst10|snake_y[0][7]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.656             ;
-; hw_image_generator:inst10|snake_y[0][6]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.656             ;
-; hw_image_generator:inst10|snake_y[0][5]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.656             ;
-; hw_image_generator:inst10|snake_y[0][4]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.656             ;
-; hw_image_generator:inst10|snake_y[0][3]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.610             ;
-; hw_image_generator:inst10|direction[0]                      ; hw_image_generator:inst10|local_next_direction[0]            ; 2.568             ;
-; hw_image_generator:inst10|snake_x[0][8]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.525             ;
-; hw_image_generator:inst10|snake_x[0][7]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.525             ;
-; hw_image_generator:inst10|snake_x[0][6]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.525             ;
-; hw_image_generator:inst10|snake_x[0][4]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.525             ;
-; hw_image_generator:inst10|snake_x[0][5]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.525             ;
-; hw_image_generator:inst10|snake_y[0][2]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.519             ;
-; hw_image_generator:inst10|snake_y[0][1]                     ; hw_image_generator:inst10|snake_x[0][6]                      ; 2.519             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|flipflops[1]   ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result          ; 2.302             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|flipflops[0]   ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result          ; 2.302             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_out[8] ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result          ; 2.302             ;
-; ps2_keyboard:inst7|count_idle[10]                           ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[9]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[8]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[7]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[11]                           ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[5]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[4]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[3]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[2]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[0]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[6]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|count_idle[1]                            ; ps2_keyboard:inst7|count_idle[1]                             ; 2.299             ;
-; ps2_keyboard:inst7|ps2_code_new                             ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[0]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[2]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[1]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[3]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[4]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[5]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[6]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; ps2_keyboard:inst7|ps2_code[7]                              ; hw_image_generator:inst10|local_next_direction[0]            ; 1.305             ;
-; hw_image_generator:inst10|random_seed[0]                    ; hw_image_generator:inst10|Mult0~223                          ; 0.991             ;
-; hw_image_generator:inst10|random_seed[1]                    ; hw_image_generator:inst10|Mult0~223                          ; 0.989             ;
-; hw_image_generator:inst10|random_seed[2]                    ; hw_image_generator:inst10|Mult0~223                          ; 0.651             ;
-; hw_image_generator:inst10|random_seed[5]                    ; hw_image_generator:inst10|Mult0~223                          ; 0.551             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_data|flipflops[1]  ; ps2_keyboard:inst7|debounce:debounce_ps2_data|counter_out[7] ; 0.436             ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_data|flipflops[0]  ; ps2_keyboard:inst7|debounce:debounce_ps2_data|counter_out[7] ; 0.405             ;
-; vga_controller:inst|h_count[8]                              ; vga_controller:inst|disp_ena                                 ; 0.256             ;
-; vga_controller:inst|h_count[2]                              ; vga_controller:inst|column[0]                                ; 0.246             ;
-; vga_controller:inst|h_count[4]                              ; vga_controller:inst|column[0]                                ; 0.227             ;
-; hw_image_generator:inst10|random_seed[6]                    ; hw_image_generator:inst10|Mult0~223                          ; 0.220             ;
-; vga_controller:inst|h_count[7]                              ; vga_controller:inst|column[0]                                ; 0.213             ;
-; vga_controller:inst|h_count[3]                              ; vga_controller:inst|column[0]                                ; 0.213             ;
-; vga_controller:inst|h_count[1]                              ; vga_controller:inst|column[0]                                ; 0.213             ;
-+-------------------------------------------------------------+--------------------------------------------------------------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                         ;
++-------------------------------------------------------------+-----------------------------------------------------+-------------------+
+; Source Register                                             ; Destination Register                                ; Delay Added in ns ;
++-------------------------------------------------------------+-----------------------------------------------------+-------------------+
+; Clock_Divider:inst4|tmp                                     ; Clock_Divider:inst4|tmp                             ; 10.062            ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result         ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 5.264             ;
+; Clock_Divider:inst4|count[31]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[29]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[28]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[27]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[26]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[25]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[24]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[23]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[22]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[21]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[20]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[19]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[18]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[17]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[16]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[15]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[14]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[13]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[12]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[11]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[10]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[9]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[30]                               ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[7]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[6]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[5]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[4]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[3]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[2]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[1]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[0]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; Clock_Divider:inst4|count[8]                                ; Clock_Divider:inst4|tmp                             ; 5.031             ;
+; ps2_keyboard:inst7|ps2_word[3]                              ; ps2_keyboard:inst7|ps2_code[2]                      ; 3.659             ;
+; ps2_keyboard:inst7|ps2_word[1]                              ; ps2_keyboard:inst7|ps2_code[0]                      ; 3.572             ;
+; ps2_keyboard:inst7|ps2_word[7]                              ; ps2_keyboard:inst7|ps2_code[6]                      ; 3.572             ;
+; ps2_keyboard:inst7|ps2_word[4]                              ; ps2_keyboard:inst7|ps2_code[3]                      ; 3.570             ;
+; ps2_keyboard:inst7|ps2_word[5]                              ; ps2_keyboard:inst7|ps2_code[4]                      ; 3.570             ;
+; ps2_keyboard:inst7|ps2_word[6]                              ; ps2_keyboard:inst7|ps2_code[5]                      ; 3.564             ;
+; ps2_keyboard:inst7|ps2_word[2]                              ; ps2_keyboard:inst7|ps2_code[1]                      ; 3.560             ;
+; ps2_keyboard:inst7|ps2_word[8]                              ; ps2_keyboard:inst7|ps2_code[7]                      ; 3.560             ;
+; ps2_keyboard:inst7|ps2_word[0]                              ; ps2_keyboard:inst7|ps2_code_new                     ; 3.335             ;
+; hw_image_generator:inst1|snake_x[0][4]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 3.290             ;
+; hw_image_generator:inst1|snake_x[0][3]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 3.290             ;
+; hw_image_generator:inst1|snake_x[0][2]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 3.290             ;
+; hw_image_generator:inst1|snake_x[0][1]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 3.290             ;
+; ps2_keyboard:inst7|ps2_word[10]                             ; ps2_keyboard:inst7|ps2_code_new                     ; 3.209             ;
+; hw_image_generator:inst1|direction[0]                       ; hw_image_generator:inst1|local_next_direction[0]    ; 3.200             ;
+; ps2_keyboard:inst7|ps2_word[9]                              ; ps2_keyboard:inst7|ps2_code_new                     ; 3.114             ;
+; hw_image_generator:inst1|direction[1]                       ; hw_image_generator:inst1|local_next_direction[1]    ; 3.037             ;
+; hw_image_generator:inst1|snake_x[0][8]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.980             ;
+; hw_image_generator:inst1|snake_x[0][7]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.980             ;
+; hw_image_generator:inst1|snake_x[0][6]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.980             ;
+; hw_image_generator:inst1|snake_x[0][5]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.980             ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|flipflops[1]   ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 2.632             ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|flipflops[0]   ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 2.632             ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_out[8] ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result ; 2.632             ;
+; ps2_keyboard:inst7|count_idle[10]                           ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[9]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[8]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[7]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[11]                           ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[5]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[4]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[2]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[1]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[0]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[6]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; ps2_keyboard:inst7|count_idle[3]                            ; ps2_keyboard:inst7|count_idle[3]                    ; 2.323             ;
+; hw_image_generator:inst1|snake_y[0][8]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][7]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][6]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][4]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][3]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][2]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][1]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; hw_image_generator:inst1|snake_y[0][5]                      ; hw_image_generator:inst1|snake_x[0][7]              ; 2.157             ;
+; vga_controller:inst|h_count[2]                              ; vga_controller:inst|disp_ena                        ; 1.780             ;
+; vga_controller:inst|h_count[4]                              ; vga_controller:inst|disp_ena                        ; 1.754             ;
+; vga_controller:inst|h_count[8]                              ; vga_controller:inst|disp_ena                        ; 1.698             ;
+; vga_controller:inst|h_count[3]                              ; vga_controller:inst|disp_ena                        ; 1.690             ;
+; hw_image_generator:inst1|fruit_y_start[5]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.660             ;
+; hw_image_generator:inst1|fruit_y_start[4]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.660             ;
+; hw_image_generator:inst1|fruit_y_start[3]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.660             ;
+; vga_controller:inst|h_count[5]                              ; vga_controller:inst|disp_ena                        ; 1.498             ;
+; ps2_keyboard:inst7|ps2_code[2]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.462             ;
+; ps2_keyboard:inst7|ps2_code[0]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.462             ;
+; ps2_keyboard:inst7|ps2_code[4]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.462             ;
+; ps2_keyboard:inst7|ps2_code[1]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.462             ;
+; ps2_keyboard:inst7|ps2_code[5]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.462             ;
+; vga_controller:inst|h_count[6]                              ; vga_controller:inst|disp_ena                        ; 1.452             ;
+; ps2_keyboard:inst7|ps2_code[3]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.442             ;
+; ps2_keyboard:inst7|ps2_code[6]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.442             ;
+; ps2_keyboard:inst7|ps2_code[7]                              ; hw_image_generator:inst1|local_next_direction[1]    ; 1.442             ;
+; hw_image_generator:inst1|fruit_y_start[8]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.242             ;
+; hw_image_generator:inst1|fruit_y_start[7]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.242             ;
+; hw_image_generator:inst1|fruit_y_start[6]                   ; hw_image_generator:inst1|fruit_y_start[31]          ; 1.242             ;
+; vga_controller:inst|v_count[7]                              ; vga_controller:inst|disp_ena                        ; 1.212             ;
+; vga_controller:inst|v_count[6]                              ; vga_controller:inst|disp_ena                        ; 1.212             ;
++-------------------------------------------------------------+-----------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -2099,29 +2095,29 @@ Warning (15705): Ignored locations or region assignments to the following nodes
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:56
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:01:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X11_Y70 to location X21_Y81
+    Info (170196): Router estimated peak interconnect usage is 14% of the available device resources in the region that extends from location X11_Y70 to location X21_Y81
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:29
-Info (11888): Total time spent on timing analysis during the Fitter is 12.83 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:33
+Info (11888): Total time spent on timing analysis during the Fitter is 14.89 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:09
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file D:/QUARTUS_ESv1/output_files/snake.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 6725 megabytes
-    Info: Processing ended: Wed Dec  4 22:50:13 2024
-    Info: Elapsed time: 00:03:25
-    Info: Total CPU time (on all processors): 00:03:34
+    Info: Peak virtual memory: 6736 megabytes
+    Info: Processing ended: Wed Dec  4 23:59:30 2024
+    Info: Elapsed time: 00:03:53
+    Info: Total CPU time (on all processors): 00:03:38
 
 
 +----------------------------+
