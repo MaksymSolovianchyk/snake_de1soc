@@ -1,0 +1,8 @@
+	component clock50to25 is
+		port (
+			clk_in_clk  : in  std_logic := 'X'; -- clk
+			clk_out_clk : out std_logic;        -- clk
+			reset_reset : in  std_logic := 'X'  -- reset
+		);
+	end component clock50to25;
+

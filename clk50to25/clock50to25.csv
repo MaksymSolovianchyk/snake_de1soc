@@ -1,0 +1,18 @@
+# system info clock50to25 on 2024.12.04.20:43:10
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1733341375
+#
+#
+# Files generated for clock50to25 on 2024.12.04.20:43:10
+files:
+filepath,kind,attributes,module,is_top
+simulation/clock50to25.vhd,VHDL,,clock50to25,true
+simulation/submodules/clock50to25_pll_0.vho,VHDL,,clock50to25_pll_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+clock50to25.pll_0,clock50to25_pll_0
