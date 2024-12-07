@@ -496,7 +496,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 816 272 1024 448)
 	(text "hw_image_generator" (rect 5 0 105 12)(font "Arial" ))
-	(text "inst8" (rect 8 160 30 177)(font "Intel Clear" ))
+	(text "inst10" (rect 8 160 36 177)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)

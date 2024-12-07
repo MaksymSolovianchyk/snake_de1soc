@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Dec  7 21:50:29 2024
+Fitter Status : Successful - Sat Dec  7 23:45:54 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : snake
 Top-level Entity Name : snake
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2,646 / 32,070 ( 8 % )
-Total registers : 496
+Logic utilization (in ALMs) : 4,843 / 32,070 ( 15 % )
+Total registers : 712
 Total pins : 32 / 457 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
