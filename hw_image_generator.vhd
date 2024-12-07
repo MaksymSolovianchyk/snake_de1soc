@@ -12,9 +12,9 @@ PORT (
     row : IN INTEGER; -- row pixel coordinate
     column : IN INTEGER; -- column pixel coordinate
     ps2_code : IN STD_LOGIC_VECTOR(7 DOWNTO 0); -- keys for movement
-	 ps2_code_new : IN STD_LOGIC;
+    ps2_code_new : IN STD_LOGIC;
     clock : IN STD_LOGIC;
-	 ps2_clk : IN STD_LOGIC;
+    ps2_clk : IN STD_LOGIC;
     red : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- red magnitude output
     green : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0'); -- green magnitude output
     blue : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) := (OTHERS => '0') -- blue magnitude output
@@ -29,8 +29,8 @@ ARCHITECTURE behavior OF hw_image_generator IS
     CONSTANT game_space_y_end : INTEGER := 480;
     CONSTANT wall_thickness : INTEGER := 10;
 	 
-	 CONSTANT fruit_x_bound : INTEGER := game_space_x_end - game_space_x_start - 20;
-	 CONSTANT fruit_y_bound : INTEGER := game_space_y_end - game_space_y_start - 20;
+    CONSTANT fruit_x_bound : INTEGER := game_space_x_end - game_space_x_start - 20;
+    CONSTANT fruit_y_bound : INTEGER := game_space_y_end - game_space_y_start - 20;
 
     -- Movement parameters
     CONSTANT step_size : INTEGER := 10;
@@ -47,7 +47,7 @@ ARCHITECTURE behavior OF hw_image_generator IS
     -- Direction control
     SIGNAL direction : INTEGER RANGE 0 TO 3;
     SIGNAL next_direction : INTEGER RANGE 0 TO 3;
-	 SIGNAL local_next_direction : INTEGER RANGE 0 TO 3;
+    SIGNAL local_next_direction : INTEGER RANGE 0 TO 3;
 
     -- Score tracking
     SIGNAL score : INTEGER := 0;
@@ -99,7 +99,6 @@ process(ps2_clk, ps2_code, ps2_code_new)
             local_next_direction <= direction;
         end case;
       end if;
-
       -- Update the next_direction output
       next_direction <= local_next_direction;
 
@@ -111,8 +110,8 @@ process(ps2_clk, ps2_code, ps2_code_new)
         IF rising_edge(clock) THEN
             direction <= next_direction;
 
-            FOR i IN 17 DOWNTO 1 LOOP
-			IF i <= snake_length THEN
+            FOR i IN 6 DOWNTO 1 LOOP
+			IF i < snake_length THEN
 				snake_x(i) <= snake_x(i - 1);
 				snake_y(i) <= snake_y(i - 1);
 				END IF;
@@ -134,9 +133,9 @@ process(ps2_clk, ps2_code, ps2_code_new)
 
                 
                 random_seed <= random_seed + 1;
-					 fruit_x_start <= ((random_seed * 31) MOD fruit_x_bound) / 10 * 10 + game_space_x_start;
-					 fruit_y_start <= ((random_seed * 47) MOD fruit_y_bound) / 10 * 10 + game_space_y_start;
-                             END IF;
+		fruit_x_start <= ((random_seed * 31) MOD fruit_x_bound) / 10 * 10 + game_space_x_start;
+		fruit_y_start <= ((random_seed * 47) MOD fruit_y_bound) / 10 * 10 + game_space_y_start;
+         END IF;
 
             -- Collision with walls
             IF snake_x(0) < game_space_x_start OR snake_x(0) > game_space_x_end OR
@@ -144,13 +143,15 @@ process(ps2_clk, ps2_code, ps2_code_new)
                 -- Game over logic
                 score <= 0;
                 snake_length <= 1;
-                snake_x(0) <= 100;
-                snake_y(0) <= 250;
+                --snake_x(0) <= 100;
+                --snake_y(0) <= 250;
+					 snake_x <= (100, OTHERS => 0);
+					 snake_y <= (250, OTHERS => 0);
+					 
             END IF;
         END IF;
     END PROCESS;
 
-    -- Display logic
     PROCESS(disp_ena, row, column)
     BEGIN
         IF disp_ena = '1' THEN
@@ -159,13 +160,40 @@ process(ps2_clk, ps2_code, ps2_code_new)
                 -- Draw snake
                 IF row >= snake_y(0) AND row < snake_y(0) + step_size AND
                    column >= snake_x(0) AND column < snake_x(0) + step_size THEN
-                    red <= (OTHERS => '1'); -- Snake color
+                    red <= (OTHERS => '1'); 
                     green <= (OTHERS => '0');
                     blue <= (OTHERS => '1');
+						 
+						   ELSIF row >= snake_y(1) AND row < snake_y(1) + step_size AND
+                   column >= snake_x(1) AND column < snake_x(1) + step_size THEN
+                    red <= (OTHERS => '1'); 
+                    green <= (OTHERS => '0');
+                    blue <= (OTHERS => '1');
+						   ELSIF row >= snake_y(2) AND row < snake_y(2) + step_size AND
+                   column >= snake_x(2) AND column < snake_x(2) + step_size THEN
+                    red <= (OTHERS => '1'); 
+                    green <= (OTHERS => '0');
+                    blue <= (OTHERS => '1');
+						   ELSIF row >= snake_y(3) AND row < snake_y(3) + step_size AND
+                   column >= snake_x(3) AND column < snake_x(3) + step_size THEN
+                    red <= (OTHERS => '1'); 
+                    green <= (OTHERS => '0');
+                    blue <= (OTHERS => '1');
+						   ELSIF row >= snake_y(4) AND row < snake_y(4) + step_size AND
+                   column >= snake_x(4) AND column < snake_x(4) + step_size THEN
+                    red <= (OTHERS => '1'); 
+                    green <= (OTHERS => '0');
+                    blue <= (OTHERS => '1');
+						   ELSIF row >= snake_y(5) AND row < snake_y(5) + step_size AND
+                   column >= snake_x(5) AND column < snake_x(5) + step_size THEN
+                    red <= (OTHERS => '1'); 
+                    green <= (OTHERS => '0');
+                    blue <= (OTHERS => '1');
+						  
                 -- Draw fruit
                 ELSIF row >= fruit_y_start AND row < fruit_y_start + fruit_height AND
                       column >= fruit_x_start AND column < fruit_x_start + fruit_width THEN
-                    red <= "11111111"; -- Fruit color
+                    red <= "11111111"; 
                     green <= "10101010";
                     blue <= "00000000";
                 -- Draw walls

@@ -1,5 +1,5 @@
 Timing Analyzer report for snake
-Wed Dec  4 23:59:52 2024
+Sat Dec  7 21:17:10 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -100,16 +100,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.96        ;
+; Average used               ; 2.73        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  54.0%      ;
-;     Processor 3            ;  51.4%      ;
-;     Processor 4            ;  50.9%      ;
-;     Processor 5            ;  19.9%      ;
-;     Processor 6            ;  19.9%      ;
+;     Processor 2            ;  42.7%      ;
+;     Processor 3            ;  42.4%      ;
+;     Processor 4            ;  42.1%      ;
+;     Processor 5            ;  22.8%      ;
+;     Processor 6            ;  22.7%      ;
 +----------------------------+-------------+
 
 
@@ -131,10 +131,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+--------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                         ; Note ;
 +------------+-----------------+--------------------------------------------------------------------+------+
-; 8.14 MHz   ; 8.14 MHz        ; Clock_Divider:inst4|tmp                                            ;      ;
-; 91.62 MHz  ; 91.62 MHz       ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 166.06 MHz ; 166.06 MHz      ; clk_in                                                             ;      ;
-; 388.35 MHz ; 388.35 MHz      ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ;      ;
+; 8.08 MHz   ; 8.08 MHz        ; Clock_Divider:inst4|tmp                                            ;      ;
+; 90.3 MHz   ; 90.3 MHz        ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 145.92 MHz ; 145.92 MHz      ; clk_in                                                             ;      ;
+; 371.33 MHz ; 371.33 MHz      ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ;      ;
 +------------+-----------------+--------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,23 +150,23 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------------------------------+----------+---------------+
 ; Clock                                                              ; Slack    ; End Point TNS ;
 +--------------------------------------------------------------------+----------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -121.865 ; -8135.334     ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.491   ; -6.491        ;
-; clk_in                                                             ; -4.856   ; -74.326       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.288   ; -17.585       ;
+; Clock_Divider:inst4|tmp                                            ; -122.773 ; -8821.747     ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.693   ; -6.693        ;
+; clk_in                                                             ; -3.860   ; -72.774       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.663   ; -23.264       ;
 +--------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                                         ;
-+--------------------------------------------------------------------+-------+---------------+
-; Clock                                                              ; Slack ; End Point TNS ;
-+--------------------------------------------------------------------+-------+---------------+
-; clk_in                                                             ; 0.376 ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.389 ; 0.000         ;
-; Clock_Divider:inst4|tmp                                            ; 0.417 ; 0.000         ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.737 ; 0.000         ;
-+--------------------------------------------------------------------+-------+---------------+
++---------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                          ;
++--------------------------------------------------------------------+--------+---------------+
+; Clock                                                              ; Slack  ; End Point TNS ;
++--------------------------------------------------------------------+--------+---------------+
+; clk_in                                                             ; -2.782 ; -33.354       ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.376  ; 0.000         ;
+; Clock_Divider:inst4|tmp                                            ; 0.420  ; 0.000         ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.705  ; 0.000         ;
++--------------------------------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -186,11 +186,11 @@ No paths to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -2.225 ; -126.978      ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -0.394 ; -6.245        ;
+; Clock_Divider:inst4|tmp                                            ; -2.225 ; -199.875      ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -0.394 ; -7.392        ;
 ; inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; clk_in                                                             ; 8.769  ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.153 ; 0.000         ;
+; clk_in                                                             ; 8.912  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.158 ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -206,10 +206,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+--------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                         ; Note ;
 +------------+-----------------+--------------------------------------------------------------------+------+
-; 7.88 MHz   ; 7.88 MHz        ; Clock_Divider:inst4|tmp                                            ;      ;
-; 94.2 MHz   ; 94.2 MHz        ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 168.92 MHz ; 168.92 MHz      ; clk_in                                                             ;      ;
-; 409.33 MHz ; 409.33 MHz      ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ;      ;
+; 7.83 MHz   ; 7.83 MHz        ; Clock_Divider:inst4|tmp                                            ;      ;
+; 93.38 MHz  ; 93.38 MHz       ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 145.62 MHz ; 145.62 MHz      ; clk_in                                                             ;      ;
+; 383.73 MHz ; 383.73 MHz      ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ;      ;
 +------------+-----------------+--------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -219,23 +219,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------------------------------+----------+---------------+
 ; Clock                                                              ; Slack    ; End Point TNS ;
 +--------------------------------------------------------------------+----------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -125.910 ; -8370.468     ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.830   ; -5.830        ;
-; clk_in                                                             ; -4.697   ; -66.633       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.369   ; -16.523       ;
+; Clock_Divider:inst4|tmp                                            ; -126.699 ; -9007.593     ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.005   ; -6.005        ;
+; clk_in                                                             ; -3.777   ; -64.787       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.752   ; -22.195       ;
 +--------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                          ;
-+--------------------------------------------------------------------+-------+---------------+
-; Clock                                                              ; Slack ; End Point TNS ;
-+--------------------------------------------------------------------+-------+---------------+
-; clk_in                                                             ; 0.088 ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.254 ; 0.000         ;
-; Clock_Divider:inst4|tmp                                            ; 0.434 ; 0.000         ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.713 ; 0.000         ;
-+--------------------------------------------------------------------+-------+---------------+
++---------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                           ;
++--------------------------------------------------------------------+--------+---------------+
+; Clock                                                              ; Slack  ; End Point TNS ;
++--------------------------------------------------------------------+--------+---------------+
+; clk_in                                                             ; -2.946 ; -35.322       ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.376  ; 0.000         ;
+; Clock_Divider:inst4|tmp                                            ; 0.436  ; 0.000         ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.724  ; 0.000         ;
++--------------------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------
@@ -255,11 +255,11 @@ No paths to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -2.225 ; -124.391      ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -0.394 ; -6.276        ;
+; Clock_Divider:inst4|tmp                                            ; -2.225 ; -196.561      ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -0.394 ; -7.340        ;
 ; inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; clk_in                                                             ; 8.756  ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.105 ; 0.000         ;
+; clk_in                                                             ; 8.901  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.107 ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -275,23 +275,23 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -67.017 ; -4500.165     ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.447  ; -5.447        ;
-; clk_in                                                             ; -3.864  ; -57.677       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -1.685  ; -8.134        ;
+; Clock_Divider:inst4|tmp                                            ; -67.279 ; -4877.796     ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -5.440  ; -5.440        ;
+; clk_in                                                             ; -3.223  ; -53.479       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -1.928  ; -10.857       ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                         ;
-+--------------------------------------------------------------------+-------+---------------+
-; Clock                                                              ; Slack ; End Point TNS ;
-+--------------------------------------------------------------------+-------+---------------+
-; Clock_Divider:inst4|tmp                                            ; 0.155 ; 0.000         ;
-; clk_in                                                             ; 0.181 ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.205 ; 0.000         ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.456 ; 0.000         ;
-+--------------------------------------------------------------------+-------+---------------+
++---------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                          ;
++--------------------------------------------------------------------+--------+---------------+
+; Clock                                                              ; Slack  ; End Point TNS ;
++--------------------------------------------------------------------+--------+---------------+
+; clk_in                                                             ; -1.672 ; -20.058       ;
+; Clock_Divider:inst4|tmp                                            ; 0.154  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.201  ; 0.000         ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.424  ; 0.000         ;
++--------------------------------------------------------------------+--------+---------------+
 
 
 ------------------------------------------
@@ -311,11 +311,11 @@ No paths to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -1.702 ; -35.820       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.090  ; 0.000         ;
+; Clock_Divider:inst4|tmp                                            ; -1.702 ; -39.975       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.115  ; 0.000         ;
 ; inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; clk_in                                                             ; 8.819  ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.409 ; 0.000         ;
+; clk_in                                                             ; 8.934  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.412 ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -331,10 +331,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------------------------------------+---------+---------------+
 ; Clock                                                              ; Slack   ; End Point TNS ;
 +--------------------------------------------------------------------+---------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -63.636 ; -4244.499     ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.363  ; -4.363        ;
-; clk_in                                                             ; -3.277  ; -45.283       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -1.693  ; -6.775        ;
+; Clock_Divider:inst4|tmp                                            ; -64.156 ; -4583.435     ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -4.348  ; -4.348        ;
+; clk_in                                                             ; -2.713  ; -42.185       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -1.919  ; -9.154        ;
 +--------------------------------------------------------------------+---------+---------------+
 
 
@@ -343,10 +343,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; clk_in                                                             ; -0.056 ; -0.111        ;
+; clk_in                                                             ; -1.712 ; -20.756       ;
 ; Clock_Divider:inst4|tmp                                            ; 0.143  ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.191  ; 0.000         ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.404  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.189  ; 0.000         ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.390  ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -367,11 +367,11 @@ No paths to report.
 +--------------------------------------------------------------------+--------+---------------+
 ; Clock                                                              ; Slack  ; End Point TNS ;
 +--------------------------------------------------------------------+--------+---------------+
-; Clock_Divider:inst4|tmp                                            ; -1.702 ; -34.484       ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.098  ; 0.000         ;
+; Clock_Divider:inst4|tmp                                            ; -1.702 ; -36.526       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0.118  ; 0.000         ;
 ; inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 0.325  ; 0.000         ;
-; clk_in                                                             ; 8.840  ; 0.000         ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.402 ; 0.000         ;
+; clk_in                                                             ; 8.948  ; 0.000         ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.404 ; 0.000         ;
 +--------------------------------------------------------------------+--------+---------------+
 
 
@@ -382,24 +382,24 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                 ;
-+---------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Clock                                                               ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                    ; -125.910  ; -0.056 ; N/A      ; N/A     ; -2.225              ;
-;  Clock_Divider:inst4|tmp                                            ; -125.910  ; 0.143  ; N/A      ; N/A     ; -2.225              ;
-;  clk_in                                                             ; -4.856    ; -0.056 ; N/A      ; N/A     ; 8.756               ;
-;  inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.325               ;
-;  inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.491    ; 0.191  ; N/A      ; N/A     ; 19.105              ;
-;  ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.369    ; 0.404  ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS                                                     ; -8459.454 ; -0.111 ; 0.0      ; 0.0     ; -133.223            ;
-;  Clock_Divider:inst4|tmp                                            ; -8370.468 ; 0.000  ; N/A      ; N/A     ; -126.978            ;
-;  clk_in                                                             ; -74.326   ; -0.111 ; N/A      ; N/A     ; 0.000               ;
-;  inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
-;  inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.491    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-;  ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -17.585   ; 0.000  ; N/A      ; N/A     ; -6.276              ;
-+---------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                  ;
++---------------------------------------------------------------------+-----------+---------+----------+---------+---------------------+
+; Clock                                                               ; Setup     ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------------------------------------+-----------+---------+----------+---------+---------------------+
+; Worst-case Slack                                                    ; -126.699  ; -2.946  ; N/A      ; N/A     ; -2.225              ;
+;  Clock_Divider:inst4|tmp                                            ; -126.699  ; 0.143   ; N/A      ; N/A     ; -2.225              ;
+;  clk_in                                                             ; -3.860    ; -2.946  ; N/A      ; N/A     ; 8.901               ;
+;  inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A     ; N/A      ; N/A     ; 0.325               ;
+;  inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.693    ; 0.189   ; N/A      ; N/A     ; 19.107              ;
+;  ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -3.752    ; 0.390   ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS                                                     ; -9100.58  ; -35.322 ; 0.0      ; 0.0     ; -207.267            ;
+;  Clock_Divider:inst4|tmp                                            ; -9007.593 ; 0.000   ; N/A      ; N/A     ; -199.875            ;
+;  clk_in                                                             ; -72.774   ; -35.322 ; N/A      ; N/A     ; 0.000               ;
+;  inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A     ; N/A      ; N/A     ; 0.000               ;
+;  inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -6.693    ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; -23.264   ; 0.000   ; N/A      ; N/A     ; -7.392              ;
++---------------------------------------------------------------------+-----------+---------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -603,15 +603,15 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                         ; To Clock                                                           ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
-; clk_in                                                             ; clk_in                                                             ; 573          ; 0        ; 0        ; 0        ;
+; clk_in                                                             ; clk_in                                                             ; 569          ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; clk_in                                                             ; 6            ; 0        ; 0        ; 0        ;
 ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; clk_in                                                             ; 25           ; 132      ; 0        ; 0        ;
 ; clk_in                                                             ; Clock_Divider:inst4|tmp                                            ; 2            ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; Clock_Divider:inst4|tmp                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1            ; 1        ; 0        ; 0        ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5123         ; 0        ; 0        ; 0        ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5160         ; 0        ; 0        ; 0        ;
 ; clk_in                                                             ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 1        ; 0        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 0        ; 11       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 0        ; 13       ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -621,15 +621,15 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                         ; To Clock                                                           ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
-; clk_in                                                             ; clk_in                                                             ; 573          ; 0        ; 0        ; 0        ;
+; clk_in                                                             ; clk_in                                                             ; 569          ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; clk_in                                                             ; 6            ; 0        ; 0        ; 0        ;
 ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; clk_in                                                             ; 25           ; 132      ; 0        ; 0        ;
 ; clk_in                                                             ; Clock_Divider:inst4|tmp                                            ; 2            ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; Clock_Divider:inst4|tmp                                            ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; Clock_Divider:inst4|tmp                                            ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1            ; 1        ; 0        ; 0        ;
-; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5123         ; 0        ; 0        ; 0        ;
+; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 5160         ; 0        ; 0        ; 0        ;
 ; clk_in                                                             ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 1        ; 0        ;
-; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 0        ; 11       ;
+; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; ps2_keyboard:inst7|debounce:debounce_ps2_clk|result                ; 0            ; 0        ; 0        ; 13       ;
 +--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -656,7 +656,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 2     ; 2    ;
 ; Unconstrained Input Port Paths  ; 2     ; 2    ;
 ; Unconstrained Output Ports      ; 27    ; 27   ;
-; Unconstrained Output Port Paths ; 2619  ; 2619 ;
+; Unconstrained Output Port Paths ; 4779  ; 4779 ;
 +---------------------------------+-------+------+
 
 
@@ -769,7 +769,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Dec  4 23:59:39 2024
+    Info: Processing started: Sat Dec  7 21:16:56 2024
 Info: Command: quartus_sta snake -c snake
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -796,30 +796,30 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -121.865
+Info (332146): Worst-case setup slack is -122.773
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -121.865           -8135.334 Clock_Divider:inst4|tmp 
-    Info (332119):    -6.491              -6.491 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.856             -74.326 clk_in 
-    Info (332119):    -3.288             -17.585 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
-Info (332146): Worst-case hold slack is 0.376
+    Info (332119):  -122.773           -8821.747 Clock_Divider:inst4|tmp 
+    Info (332119):    -6.693              -6.693 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.860             -72.774 clk_in 
+    Info (332119):    -3.663             -23.264 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+Info (332146): Worst-case hold slack is -2.782
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.376               0.000 clk_in 
-    Info (332119):     0.389               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.417               0.000 Clock_Divider:inst4|tmp 
-    Info (332119):     0.737               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -2.782             -33.354 clk_in 
+    Info (332119):     0.376               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.420               0.000 Clock_Divider:inst4|tmp 
+    Info (332119):     0.705               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -126.978 Clock_Divider:inst4|tmp 
-    Info (332119):    -0.394              -6.245 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -2.225            -199.875 Clock_Divider:inst4|tmp 
+    Info (332119):    -0.394              -7.392 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
     Info (332119):     0.325               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.769               0.000 clk_in 
-    Info (332119):    19.153               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.912               0.000 clk_in 
+    Info (332119):    19.158               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -832,30 +832,30 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -125.910
+Info (332146): Worst-case setup slack is -126.699
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):  -125.910           -8370.468 Clock_Divider:inst4|tmp 
-    Info (332119):    -5.830              -5.830 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -4.697             -66.633 clk_in 
-    Info (332119):    -3.369             -16.523 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
-Info (332146): Worst-case hold slack is 0.088
+    Info (332119):  -126.699           -9007.593 Clock_Divider:inst4|tmp 
+    Info (332119):    -6.005              -6.005 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.777             -64.787 clk_in 
+    Info (332119):    -3.752             -22.195 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+Info (332146): Worst-case hold slack is -2.946
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.088               0.000 clk_in 
-    Info (332119):     0.254               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.434               0.000 Clock_Divider:inst4|tmp 
-    Info (332119):     0.713               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -2.946             -35.322 clk_in 
+    Info (332119):     0.376               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.436               0.000 Clock_Divider:inst4|tmp 
+    Info (332119):     0.724               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225            -124.391 Clock_Divider:inst4|tmp 
-    Info (332119):    -0.394              -6.276 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -2.225            -196.561 Clock_Divider:inst4|tmp 
+    Info (332119):    -0.394              -7.340 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
     Info (332119):     0.325               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.756               0.000 clk_in 
-    Info (332119):    19.105               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.901               0.000 clk_in 
+    Info (332119):    19.107               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -868,30 +868,30 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -67.017
+Info (332146): Worst-case setup slack is -67.279
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -67.017           -4500.165 Clock_Divider:inst4|tmp 
-    Info (332119):    -5.447              -5.447 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -3.864             -57.677 clk_in 
-    Info (332119):    -1.685              -8.134 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
-Info (332146): Worst-case hold slack is 0.155
+    Info (332119):   -67.279           -4877.796 Clock_Divider:inst4|tmp 
+    Info (332119):    -5.440              -5.440 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -3.223             -53.479 clk_in 
+    Info (332119):    -1.928             -10.857 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+Info (332146): Worst-case hold slack is -1.672
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.155               0.000 Clock_Divider:inst4|tmp 
-    Info (332119):     0.181               0.000 clk_in 
-    Info (332119):     0.205               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.456               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -1.672             -20.058 clk_in 
+    Info (332119):     0.154               0.000 Clock_Divider:inst4|tmp 
+    Info (332119):     0.201               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.424               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -35.820 Clock_Divider:inst4|tmp 
-    Info (332119):     0.090               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -1.702             -39.975 Clock_Divider:inst4|tmp 
+    Info (332119):     0.115               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
     Info (332119):     0.325               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.819               0.000 clk_in 
-    Info (332119):    19.409               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.934               0.000 clk_in 
+    Info (332119):    19.412               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
@@ -902,38 +902,38 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -63.636
+Info (332146): Worst-case setup slack is -64.156
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -63.636           -4244.499 Clock_Divider:inst4|tmp 
-    Info (332119):    -4.363              -4.363 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    -3.277             -45.283 clk_in 
-    Info (332119):    -1.693              -6.775 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
-Info (332146): Worst-case hold slack is -0.056
+    Info (332119):   -64.156           -4583.435 Clock_Divider:inst4|tmp 
+    Info (332119):    -4.348              -4.348 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    -2.713             -42.185 clk_in 
+    Info (332119):    -1.919              -9.154 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+Info (332146): Worst-case hold slack is -1.712
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.056              -0.111 clk_in 
+    Info (332119):    -1.712             -20.756 clk_in 
     Info (332119):     0.143               0.000 Clock_Divider:inst4|tmp 
-    Info (332119):     0.191               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.404               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):     0.189               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.390               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702             -34.484 Clock_Divider:inst4|tmp 
-    Info (332119):     0.098               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
+    Info (332119):    -1.702             -36.526 Clock_Divider:inst4|tmp 
+    Info (332119):     0.118               0.000 ps2_keyboard:inst7|debounce:debounce_ps2_clk|result 
     Info (332119):     0.325               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     8.840               0.000 clk_in 
-    Info (332119):    19.402               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.948               0.000 clk_in 
+    Info (332119):    19.404               0.000 inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 4 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5251 megabytes
-    Info: Processing ended: Wed Dec  4 23:59:52 2024
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 5256 megabytes
+    Info: Processing ended: Sat Dec  7 21:17:10 2024
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:16
 
 

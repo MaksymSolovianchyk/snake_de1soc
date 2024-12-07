@@ -1,5 +1,5 @@
 Flow report for snake
-Wed Dec  4 23:59:55 2024
+Sat Dec  7 21:17:13 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Dec  4 23:59:55 2024          ;
+; Flow Status                     ; Successful - Sat Dec  7 21:17:13 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; snake                                          ;
 ; Top-level Entity Name           ; snake                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 2,269 / 32,070 ( 7 % )                         ;
-; Total registers                 ; 290                                            ;
+; Logic utilization (in ALMs)     ; 2,449 / 32,070 ( 8 % )                         ;
+; Total registers                 ; 412                                            ;
 ; Total pins                      ; 32 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/04/2024 23:55:20 ;
+; Start date & time ; 12/07/2024 21:12:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; snake               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+---------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 2546707165641.173335292021040                                 ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 2546707165641.173360237515660                                 ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -109,12 +109,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4948 MB             ; 00:00:18                           ;
-; Fitter               ; 00:03:52     ; 1.2                     ; 6736 MB             ; 00:03:37                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4883 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:13     ; 3.0                     ; 5251 MB             ; 00:00:16                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4875 MB             ; 00:00:02                           ;
-; Total                ; 00:04:30     ; --                      ; --                  ; 00:04:18                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4948 MB             ; 00:00:17                           ;
+; Fitter               ; 00:03:32     ; 1.2                     ; 6734 MB             ; 00:03:22                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4887 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:14     ; 2.7                     ; 5256 MB             ; 00:00:16                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4872 MB             ; 00:00:02                           ;
+; Total                ; 00:04:12     ; --                      ; --                  ; 00:04:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
