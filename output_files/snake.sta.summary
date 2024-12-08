@@ -3,44 +3,56 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'Clock_Divider:inst4|tmp'
-Slack : -184.755
-TNS   : -21822.257
+Slack : -186.664
+TNS   : -24093.464
 
-Type  : Slow 1100mV 85C Model Setup 'clk_in'
-Slack : -3.063
-TNS   : -34.359
-
-Type  : Slow 1100mV 85C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -2.895
-TNS   : -23.608
+Type  : Slow 1100mV 85C Model Setup 'vga_controller:inst|column[0]'
+Slack : -67.564
+TNS   : -543.164
 
 Type  : Slow 1100mV 85C Model Setup 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.023
-TNS   : -1.023
+Slack : -6.700
+TNS   : -6.700
+
+Type  : Slow 1100mV 85C Model Setup 'clk_in'
+Slack : -4.307
+TNS   : -72.550
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
+Slack : -3.704
+TNS   : -26.839
 
 Type  : Slow 1100mV 85C Model Hold 'clk_in'
-Slack : -2.850
-TNS   : -41.874
+Slack : -2.528
+TNS   : -7.121
 
-Type  : Slow 1100mV 85C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -2.680
-TNS   : -2.680
+Type  : Slow 1100mV 85C Model Hold 'vga_controller:inst|column[0]'
+Slack : -0.905
+TNS   : -9.408
 
 Type  : Slow 1100mV 85C Model Hold 'Clock_Divider:inst4|tmp'
-Slack : 0.373
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.385
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : 0.637
+Slack : 0.781
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock_Divider:inst4|tmp'
 Slack : -2.225
-TNS   : -427.113
+TNS   : -470.369
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
 Slack : -0.394
-TNS   : -8.116
+TNS   : -10.467
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vga_controller:inst|column[0]'
+Slack : 0.250
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
@@ -51,163 +63,199 @@ Slack : 8.898
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.151
+Slack : 19.160
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'Clock_Divider:inst4|tmp'
-Slack : -187.971
-TNS   : -21598.461
+Slack : -189.937
+TNS   : -23822.978
 
-Type  : Slow 1100mV 0C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -3.024
-TNS   : -22.474
-
-Type  : Slow 1100mV 0C Model Setup 'clk_in'
-Slack : -2.720
-TNS   : -26.609
+Type  : Slow 1100mV 0C Model Setup 'vga_controller:inst|column[0]'
+Slack : -69.866
+TNS   : -554.696
 
 Type  : Slow 1100mV 0C Model Setup 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.615
-TNS   : -0.615
+Slack : -6.088
+TNS   : -6.088
 
-Type  : Slow 1100mV 0C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -3.044
-TNS   : -3.044
+Type  : Slow 1100mV 0C Model Setup 'clk_in'
+Slack : -4.153
+TNS   : -64.759
+
+Type  : Slow 1100mV 0C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
+Slack : -3.817
+TNS   : -25.664
 
 Type  : Slow 1100mV 0C Model Hold 'clk_in'
-Slack : -3.019
-TNS   : -44.174
+Slack : -2.608
+TNS   : -7.403
+
+Type  : Slow 1100mV 0C Model Hold 'vga_controller:inst|column[0]'
+Slack : -0.990
+TNS   : -11.542
 
 Type  : Slow 1100mV 0C Model Hold 'Clock_Divider:inst4|tmp'
-Slack : 0.376
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.385
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : 0.606
+Slack : 0.770
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock_Divider:inst4|tmp'
 Slack : -2.225
-TNS   : -414.558
+TNS   : -460.642
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
 Slack : -0.394
-TNS   : -8.330
+TNS   : -9.751
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vga_controller:inst|column[0]'
+Slack : 0.298
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_in'
-Slack : 8.892
+Slack : 8.908
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.094
+Slack : 19.117
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'Clock_Divider:inst4|tmp'
-Slack : -102.784
-TNS   : -12960.106
+Slack : -104.952
+TNS   : -14572.353
 
-Type  : Fast 1100mV 85C Model Setup 'clk_in'
-Slack : -2.484
-TNS   : -26.210
+Type  : Fast 1100mV 85C Model Setup 'vga_controller:inst|column[0]'
+Slack : -36.187
+TNS   : -285.627
 
 Type  : Fast 1100mV 85C Model Setup 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.492
-TNS   : -1.492
+Slack : -5.398
+TNS   : -5.398
+
+Type  : Fast 1100mV 85C Model Setup 'clk_in'
+Slack : -3.469
+TNS   : -56.912
 
 Type  : Fast 1100mV 85C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -1.477
-TNS   : -10.862
+Slack : -1.986
+TNS   : -12.182
 
 Type  : Fast 1100mV 85C Model Hold 'clk_in'
-Slack : -1.688
-TNS   : -24.183
+Slack : -1.305
+TNS   : -3.678
 
-Type  : Fast 1100mV 85C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.294
-TNS   : -1.294
+Type  : Fast 1100mV 85C Model Hold 'vga_controller:inst|column[0]'
+Slack : -0.749
+TNS   : -8.161
 
 Type  : Fast 1100mV 85C Model Hold 'Clock_Divider:inst4|tmp'
-Slack : 0.185
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.202
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : 0.392
+Slack : 0.441
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock_Divider:inst4|tmp'
 Slack : -1.702
-TNS   : -66.768
+TNS   : -76.435
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -0.024
-TNS   : -0.024
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vga_controller:inst|column[0]'
+Slack : 0.263
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_in'
-Slack : 8.932
+Slack : 8.956
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.405
+Slack : 19.413
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'Clock_Divider:inst4|tmp'
-Slack : -96.248
-TNS   : -11739.337
+Slack : -98.231
+TNS   : -13145.908
 
-Type  : Fast 1100mV 0C Model Setup 'clk_in'
-Slack : -1.962
-TNS   : -18.413
-
-Type  : Fast 1100mV 0C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -1.495
-TNS   : -9.061
+Type  : Fast 1100mV 0C Model Setup 'vga_controller:inst|column[0]'
+Slack : -34.501
+TNS   : -267.490
 
 Type  : Fast 1100mV 0C Model Setup 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -0.949
-TNS   : -0.949
+Slack : -4.369
+TNS   : -4.369
+
+Type  : Fast 1100mV 0C Model Setup 'clk_in'
+Slack : -2.933
+TNS   : -44.913
+
+Type  : Fast 1100mV 0C Model Setup 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
+Slack : -1.956
+TNS   : -10.252
 
 Type  : Fast 1100mV 0C Model Hold 'clk_in'
-Slack : -1.728
-TNS   : -24.961
+Slack : -1.315
+TNS   : -3.725
 
-Type  : Fast 1100mV 0C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : -1.633
-TNS   : -1.633
+Type  : Fast 1100mV 0C Model Hold 'vga_controller:inst|column[0]'
+Slack : -0.750
+TNS   : -8.798
 
 Type  : Fast 1100mV 0C Model Hold 'Clock_Divider:inst4|tmp'
-Slack : 0.168
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.194
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : 0.344
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock_Divider:inst4|tmp'
 Slack : -1.702
-TNS   : -46.409
+TNS   : -51.427
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_keyboard:inst7|debounce:debounce_ps2_clk|result'
-Slack : -0.005
-TNS   : -0.005
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vga_controller:inst|column[0]'
+Slack : 0.315
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
 Slack : 0.325
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_in'
-Slack : 8.944
+Slack : 8.974
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inst3|pll_0|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
-Slack : 19.398
+Slack : 19.404
 TNS   : 0.000
 
 ------------------------------------------------------------

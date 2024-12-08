@@ -1,5 +1,5 @@
 Analysis & Synthesis report for snake
-Sun Dec  8 04:10:50 2024
+Sun Dec  8 15:03:42 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -15,26 +15,29 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: vga_controller:inst
- 16. Parameter Settings for User Entity Instance: clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i
- 17. Parameter Settings for User Entity Instance: hw_image_generator:inst19
- 18. Parameter Settings for User Entity Instance: ps2_keyboard:inst7
- 19. Parameter Settings for User Entity Instance: ps2_keyboard:inst7|debounce:debounce_ps2_clk
- 20. Parameter Settings for User Entity Instance: ps2_keyboard:inst7|debounce:debounce_ps2_data
- 21. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Mod0
- 22. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Div0
- 23. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Mod1
- 24. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Div1
- 25. Port Connectivity Checks: "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i"
- 26. Port Connectivity Checks: "clock50to25:inst3|clock50to25_pll_0:pll_0"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: vga_controller:inst
+ 17. Parameter Settings for User Entity Instance: clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i
+ 18. Parameter Settings for User Entity Instance: hw_image_generator:inst10
+ 19. Parameter Settings for User Entity Instance: ps2_keyboard:inst7
+ 20. Parameter Settings for User Entity Instance: ps2_keyboard:inst7|debounce:debounce_ps2_clk
+ 21. Parameter Settings for User Entity Instance: ps2_keyboard:inst7|debounce:debounce_ps2_data
+ 22. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod2
+ 23. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div2
+ 24. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod0
+ 25. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div0
+ 26. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod1
+ 27. Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div1
+ 28. Port Connectivity Checks: "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i"
+ 29. Port Connectivity Checks: "clock50to25:inst3|clock50to25_pll_0:pll_0"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -61,13 +64,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Dec  8 04:10:49 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Dec  8 15:03:42 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; snake                                          ;
 ; Top-level Entity Name           ; snake                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 604                                            ;
+; Total registers                 ; 636                                            ;
 ; Total pins                      ; 32                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -181,7 +184,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
@@ -223,16 +226,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 4927                    ;
+; Estimate of Logic utilization (ALMs needed) ; 5914                    ;
 ;                                             ;                         ;
-; Combinational ALUT usage for logic          ; 8717                    ;
-;     -- 7 input functions                    ; 2                       ;
-;     -- 6 input functions                    ; 1087                    ;
-;     -- 5 input functions                    ; 478                     ;
-;     -- 4 input functions                    ; 2415                    ;
-;     -- <=3 input functions                  ; 4735                    ;
+; Combinational ALUT usage for logic          ; 10674                   ;
+;     -- 7 input functions                    ; 3                       ;
+;     -- 6 input functions                    ; 1103                    ;
+;     -- 5 input functions                    ; 499                     ;
+;     -- 4 input functions                    ; 3004                    ;
+;     -- <=3 input functions                  ; 6065                    ;
 ;                                             ;                         ;
-; Dedicated logic registers                   ; 604                     ;
+; Dedicated logic registers                   ; 636                     ;
 ;                                             ;                         ;
 ; I/O pins                                    ; 32                      ;
 ;                                             ;                         ;
@@ -242,9 +245,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                       ;
 ;                                             ;                         ;
 ; Maximum fan-out node                        ; Clock_Divider:inst4|tmp ;
-; Maximum fan-out                             ; 465                     ;
-; Total fan-out                               ; 32357                   ;
-; Average fan-out                             ; 3.45                    ;
+; Maximum fan-out                             ; 497                     ;
+; Total fan-out                               ; 38652                   ;
+; Average fan-out                             ; 3.40                    ;
 +---------------------------------------------+-------------------------+
 
 
@@ -253,32 +256,42 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name        ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |snake                                   ; 8717 (0)            ; 604 (0)                   ; 0                 ; 2          ; 32   ; 0            ; |snake                                                                                                                        ; snake              ; work         ;
+; |snake                                   ; 10674 (0)           ; 636 (0)                   ; 0                 ; 2          ; 32   ; 0            ; |snake                                                                                                                        ; snake              ; work         ;
 ;    |Clock_Divider:inst4|                 ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |snake|Clock_Divider:inst4                                                                                                    ; Clock_Divider      ; work         ;
 ;    |clock50to25:inst3|                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3                                                                                                      ; clock50to25        ; clock50to25  ;
 ;       |clock50to25_pll_0:pll_0|          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0                                                                              ; clock50to25_pll_0  ; clock50to25  ;
 ;          |altera_pll:altera_pll_i|       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i                                                      ; altera_pll         ; work         ;
-;    |hw_image_generator:inst19|           ; 8588 (4878)         ; 468 (468)                 ; 0                 ; 2          ; 0    ; 0            ; |snake|hw_image_generator:inst19                                                                                              ; hw_image_generator ; work         ;
-;       |lpm_divide:Div0|                  ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_bpo:auto_generated| ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
-;             |abs_divider_kbg:divider|    ; 513 (62)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
-;                |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Div1|                  ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div1                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_bpo:auto_generated| ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
-;             |abs_divider_kbg:divider|    ; 513 (62)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
-;                |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Mod0|                  ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod0                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_uio:auto_generated| ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
-;             |abs_divider_4dg:divider|    ; 1342 (62)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
-;                |alt_u_div_o2f:divider|   ; 1248 (1248)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
-;       |lpm_divide:Mod1|                  ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod1                                                                              ; lpm_divide         ; work         ;
-;          |lpm_divide_uio:auto_generated| ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod1|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
-;             |abs_divider_4dg:divider|    ; 1342 (62)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
-;                |alt_u_div_o2f:divider|   ; 1248 (1248)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst19|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;    |hw_image_generator:inst10|           ; 10545 (5041)        ; 500 (500)                 ; 0                 ; 2          ; 0    ; 0            ; |snake|hw_image_generator:inst10                                                                                              ; hw_image_generator ; work         ;
+;       |lpm_divide:Div0|                  ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_bpo:auto_generated| ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
+;             |abs_divider_kbg:divider|    ; 513 (62)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
+;                |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Div1|                  ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_bpo:auto_generated| ; 513 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
+;             |abs_divider_kbg:divider|    ; 513 (62)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
+;                |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div1|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Div2|                  ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div2                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_bpo:auto_generated| ; 459 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div2|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo     ; work         ;
+;             |abs_divider_kbg:divider|    ; 459 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg    ; work         ;
+;                |alt_u_div_ove:divider|   ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Div2|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Mod0|                  ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_uio:auto_generated| ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
+;             |abs_divider_4dg:divider|    ; 1342 (62)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
+;                |alt_u_div_o2f:divider|   ; 1248 (1248)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Mod1|                  ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_uio:auto_generated| ; 1342 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
+;             |abs_divider_4dg:divider|    ; 1342 (62)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
+;                |alt_u_div_o2f:divider|   ; 1248 (1248)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod1|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
+;       |lpm_divide:Mod2|                  ; 1335 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod2                                                                              ; lpm_divide         ; work         ;
+;          |lpm_divide_uio:auto_generated| ; 1335 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod2|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio     ; work         ;
+;             |abs_divider_4dg:divider|    ; 1335 (8)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod2|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg    ; work         ;
+;                |alt_u_div_o2f:divider|   ; 1295 (1295)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod2|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f      ; work         ;
+;                |lpm_abs_4p9:my_abs_num|  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |snake|hw_image_generator:inst10|lpm_divide:Mod2|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9        ; work         ;
 ;    |ps2_keyboard:inst7|                  ; 44 (18)             ; 58 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7                                                                                                     ; ps2_keyboard       ; work         ;
 ;       |debounce:debounce_ps2_clk|        ; 13 (13)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_clk                                                                           ; debounce           ; work         ;
 ;       |debounce:debounce_ps2_data|       ; 13 (13)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_data                                                                          ; debounce           ; work         ;
@@ -311,57 +324,107 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------+------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                      ;
++-----------------------------------------------------+-------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                       ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------------------+------------------------+
+; hw_image_generator:inst10|digit2[3]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit2[2]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit2[0]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit2[1]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit1[3]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit1[2]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit1[0]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|digit1[1]                 ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[31]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[3]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[2]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[1]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[0]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[4]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[5]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[6]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[7]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[8]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[9]            ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[10]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[11]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[12]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[13]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[14]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[15]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[16]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[17]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[18]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[19]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[20]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[21]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[22]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[23]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[24]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[25]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[26]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[27]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[28]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[29]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; hw_image_generator:inst10|local_score[30]           ; hw_image_generator:inst10|local_score[30] ; yes                    ;
+; Number of user-specified and inferred latches = 40  ;                                           ;                        ;
++-----------------------------------------------------+-------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +---------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                ;
 +--------------------------------------------+------------------------------------------------------+
 ; Register name                              ; Reason for Removal                                   ;
 +--------------------------------------------+------------------------------------------------------+
-; hw_image_generator:inst19|fruit_x_start[0] ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|fruit_y_start[0] ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|fruit_x_start[0] ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|fruit_y_start[0] ; Stuck at GND due to stuck port data_in               ;
 ; vga_controller:inst|column[10..30]         ; Stuck at GND due to stuck port data_in               ;
 ; vga_controller:inst|row[10..30]            ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_y[0][0]    ; Merged with hw_image_generator:inst19|snake_x[0][0]  ;
-; hw_image_generator:inst19|snake_y[1][0]    ; Merged with hw_image_generator:inst19|snake_x[1][0]  ;
-; hw_image_generator:inst19|snake_y[2][0]    ; Merged with hw_image_generator:inst19|snake_x[2][0]  ;
-; hw_image_generator:inst19|snake_y[3][0]    ; Merged with hw_image_generator:inst19|snake_x[3][0]  ;
-; hw_image_generator:inst19|snake_y[4][0]    ; Merged with hw_image_generator:inst19|snake_x[4][0]  ;
-; hw_image_generator:inst19|snake_y[5][0]    ; Merged with hw_image_generator:inst19|snake_x[5][0]  ;
-; hw_image_generator:inst19|snake_y[6][0]    ; Merged with hw_image_generator:inst19|snake_x[6][0]  ;
-; hw_image_generator:inst19|snake_y[7][0]    ; Merged with hw_image_generator:inst19|snake_x[7][0]  ;
-; hw_image_generator:inst19|snake_y[8][0]    ; Merged with hw_image_generator:inst19|snake_x[8][0]  ;
-; hw_image_generator:inst19|snake_y[9][0]    ; Merged with hw_image_generator:inst19|snake_x[9][0]  ;
-; hw_image_generator:inst19|snake_y[10][0]   ; Merged with hw_image_generator:inst19|snake_x[10][0] ;
-; hw_image_generator:inst19|snake_y[11][0]   ; Merged with hw_image_generator:inst19|snake_x[11][0] ;
-; hw_image_generator:inst19|snake_y[12][0]   ; Merged with hw_image_generator:inst19|snake_x[12][0] ;
-; hw_image_generator:inst19|snake_y[13][0]   ; Merged with hw_image_generator:inst19|snake_x[13][0] ;
-; hw_image_generator:inst19|snake_y[14][0]   ; Merged with hw_image_generator:inst19|snake_x[14][0] ;
-; hw_image_generator:inst19|snake_y[15][0]   ; Merged with hw_image_generator:inst19|snake_x[15][0] ;
-; hw_image_generator:inst19|snake_y[16][0]   ; Merged with hw_image_generator:inst19|snake_x[16][0] ;
-; hw_image_generator:inst19|snake_y[17][0]   ; Merged with hw_image_generator:inst19|snake_x[17][0] ;
-; hw_image_generator:inst19|snake_y[18][0]   ; Merged with hw_image_generator:inst19|snake_x[18][0] ;
-; hw_image_generator:inst19|snake_y[19][0]   ; Merged with hw_image_generator:inst19|snake_x[19][0] ;
-; hw_image_generator:inst19|snake_y[20][0]   ; Merged with hw_image_generator:inst19|snake_x[20][0] ;
-; hw_image_generator:inst19|snake_x[0][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[1][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[2][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[3][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[4][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[5][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[6][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[7][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[8][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[9][0]    ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[10][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[11][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[12][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[13][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[14][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[15][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[16][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[17][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[18][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[19][0]   ; Stuck at GND due to stuck port data_in               ;
-; hw_image_generator:inst19|snake_x[20][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_y[0][0]    ; Merged with hw_image_generator:inst10|snake_x[0][0]  ;
+; hw_image_generator:inst10|snake_y[1][0]    ; Merged with hw_image_generator:inst10|snake_x[1][0]  ;
+; hw_image_generator:inst10|snake_y[2][0]    ; Merged with hw_image_generator:inst10|snake_x[2][0]  ;
+; hw_image_generator:inst10|snake_y[3][0]    ; Merged with hw_image_generator:inst10|snake_x[3][0]  ;
+; hw_image_generator:inst10|snake_y[4][0]    ; Merged with hw_image_generator:inst10|snake_x[4][0]  ;
+; hw_image_generator:inst10|snake_y[5][0]    ; Merged with hw_image_generator:inst10|snake_x[5][0]  ;
+; hw_image_generator:inst10|snake_y[6][0]    ; Merged with hw_image_generator:inst10|snake_x[6][0]  ;
+; hw_image_generator:inst10|snake_y[7][0]    ; Merged with hw_image_generator:inst10|snake_x[7][0]  ;
+; hw_image_generator:inst10|snake_y[8][0]    ; Merged with hw_image_generator:inst10|snake_x[8][0]  ;
+; hw_image_generator:inst10|snake_y[9][0]    ; Merged with hw_image_generator:inst10|snake_x[9][0]  ;
+; hw_image_generator:inst10|snake_y[10][0]   ; Merged with hw_image_generator:inst10|snake_x[10][0] ;
+; hw_image_generator:inst10|snake_y[11][0]   ; Merged with hw_image_generator:inst10|snake_x[11][0] ;
+; hw_image_generator:inst10|snake_y[12][0]   ; Merged with hw_image_generator:inst10|snake_x[12][0] ;
+; hw_image_generator:inst10|snake_y[13][0]   ; Merged with hw_image_generator:inst10|snake_x[13][0] ;
+; hw_image_generator:inst10|snake_y[14][0]   ; Merged with hw_image_generator:inst10|snake_x[14][0] ;
+; hw_image_generator:inst10|snake_y[15][0]   ; Merged with hw_image_generator:inst10|snake_x[15][0] ;
+; hw_image_generator:inst10|snake_y[16][0]   ; Merged with hw_image_generator:inst10|snake_x[16][0] ;
+; hw_image_generator:inst10|snake_y[17][0]   ; Merged with hw_image_generator:inst10|snake_x[17][0] ;
+; hw_image_generator:inst10|snake_y[18][0]   ; Merged with hw_image_generator:inst10|snake_x[18][0] ;
+; hw_image_generator:inst10|snake_y[19][0]   ; Merged with hw_image_generator:inst10|snake_x[19][0] ;
+; hw_image_generator:inst10|snake_y[20][0]   ; Merged with hw_image_generator:inst10|snake_x[20][0] ;
+; hw_image_generator:inst10|snake_x[0][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[1][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[2][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[3][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[4][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[5][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[6][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[7][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[8][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[9][0]    ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[10][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[11][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[12][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[13][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[14][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[15][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[16][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[17][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[18][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[19][0]   ; Stuck at GND due to stuck port data_in               ;
+; hw_image_generator:inst10|snake_x[20][0]   ; Stuck at GND due to stuck port data_in               ;
 ; Total Number of Removed Registers = 86     ;                                                      ;
 +--------------------------------------------+------------------------------------------------------+
 
@@ -371,16 +434,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 ; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                                              ;
 +-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; hw_image_generator:inst19|snake_x[0][0] ; Stuck at GND              ; hw_image_generator:inst19|snake_x[1][0], hw_image_generator:inst19|snake_x[3][0],   ;
-;                                         ; due to stuck port data_in ; hw_image_generator:inst19|snake_x[4][0], hw_image_generator:inst19|snake_x[5][0],   ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[6][0], hw_image_generator:inst19|snake_x[7][0],   ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[8][0], hw_image_generator:inst19|snake_x[9][0],   ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[10][0], hw_image_generator:inst19|snake_x[11][0], ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[12][0], hw_image_generator:inst19|snake_x[13][0], ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[14][0], hw_image_generator:inst19|snake_x[15][0], ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[16][0], hw_image_generator:inst19|snake_x[17][0], ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[18][0], hw_image_generator:inst19|snake_x[19][0], ;
-;                                         ;                           ; hw_image_generator:inst19|snake_x[20][0]                                            ;
+; hw_image_generator:inst10|snake_x[0][0] ; Stuck at GND              ; hw_image_generator:inst10|snake_x[1][0], hw_image_generator:inst10|snake_x[3][0],   ;
+;                                         ; due to stuck port data_in ; hw_image_generator:inst10|snake_x[4][0], hw_image_generator:inst10|snake_x[5][0],   ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[6][0], hw_image_generator:inst10|snake_x[7][0],   ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[8][0], hw_image_generator:inst10|snake_x[9][0],   ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[10][0], hw_image_generator:inst10|snake_x[11][0], ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[12][0], hw_image_generator:inst10|snake_x[13][0], ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[14][0], hw_image_generator:inst10|snake_x[15][0], ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[16][0], hw_image_generator:inst10|snake_x[17][0], ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[18][0], hw_image_generator:inst10|snake_x[19][0], ;
+;                                         ;                           ; hw_image_generator:inst10|snake_x[20][0]                                            ;
 +-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
@@ -389,12 +452,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 604   ;
-; Number of registers using Synchronous Clear  ; 448   ;
+; Total registers                              ; 636   ;
+; Number of registers using Synchronous Clear  ; 480   ;
 ; Number of registers using Synchronous Load   ; 72    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 503   ;
+; Number of registers using Clock Enable       ; 535   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -406,29 +469,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+---------+
 ; vga_controller:inst|column[31]             ; 7       ;
 ; vga_controller:inst|row[31]                ; 6       ;
-; vga_controller:inst|column[0]              ; 9       ;
-; vga_controller:inst|row[0]                 ; 9       ;
-; hw_image_generator:inst19|snake_y[0][7]    ; 16      ;
-; hw_image_generator:inst19|snake_y[0][6]    ; 16      ;
-; hw_image_generator:inst19|snake_y[0][5]    ; 16      ;
-; hw_image_generator:inst19|snake_y[0][4]    ; 16      ;
-; hw_image_generator:inst19|snake_y[0][3]    ; 16      ;
-; hw_image_generator:inst19|snake_y[0][1]    ; 16      ;
-; hw_image_generator:inst19|snake_x[0][6]    ; 16      ;
-; hw_image_generator:inst19|snake_x[0][5]    ; 16      ;
-; hw_image_generator:inst19|snake_x[0][2]    ; 16      ;
-; hw_image_generator:inst19|fruit_y_start[1] ; 4       ;
-; hw_image_generator:inst19|fruit_y_start[7] ; 3       ;
-; hw_image_generator:inst19|fruit_y_start[6] ; 4       ;
-; hw_image_generator:inst19|fruit_y_start[5] ; 3       ;
-; hw_image_generator:inst19|fruit_y_start[4] ; 3       ;
-; hw_image_generator:inst19|fruit_y_start[3] ; 3       ;
-; hw_image_generator:inst19|fruit_x_start[7] ; 3       ;
-; hw_image_generator:inst19|fruit_x_start[6] ; 3       ;
-; hw_image_generator:inst19|fruit_x_start[3] ; 3       ;
-; hw_image_generator:inst19|snake_length[0]  ; 10      ;
+; vga_controller:inst|column[0]              ; 25      ;
+; vga_controller:inst|row[0]                 ; 44      ;
+; hw_image_generator:inst10|snake_y[0][7]    ; 16      ;
+; hw_image_generator:inst10|snake_y[0][6]    ; 16      ;
+; hw_image_generator:inst10|snake_y[0][5]    ; 16      ;
+; hw_image_generator:inst10|snake_y[0][4]    ; 16      ;
+; hw_image_generator:inst10|snake_y[0][3]    ; 16      ;
+; hw_image_generator:inst10|snake_y[0][1]    ; 16      ;
+; hw_image_generator:inst10|snake_x[0][6]    ; 16      ;
+; hw_image_generator:inst10|snake_x[0][5]    ; 16      ;
+; hw_image_generator:inst10|snake_x[0][2]    ; 16      ;
+; hw_image_generator:inst10|fruit_x_start[7] ; 3       ;
+; hw_image_generator:inst10|fruit_x_start[6] ; 3       ;
+; hw_image_generator:inst10|fruit_x_start[3] ; 3       ;
+; hw_image_generator:inst10|fruit_y_start[1] ; 4       ;
+; hw_image_generator:inst10|fruit_y_start[7] ; 3       ;
+; hw_image_generator:inst10|fruit_y_start[6] ; 4       ;
+; hw_image_generator:inst10|fruit_y_start[5] ; 3       ;
+; hw_image_generator:inst10|fruit_y_start[4] ; 3       ;
+; hw_image_generator:inst10|fruit_y_start[3] ; 3       ;
+; hw_image_generator:inst10|snake_length[0]  ; 10      ;
 ; Clock_Divider:inst4|count[0]               ; 2       ;
-; hw_image_generator:inst19|random_seed[0]   ; 5       ;
+; hw_image_generator:inst10|random_seed[0]   ; 5       ;
 ; Total number of inverted registers = 25    ;         ;
 +--------------------------------------------+---------+
 
@@ -438,37 +501,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |snake|ps2_keyboard:inst7|count_idle[0]                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_out[0]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |snake|ps2_keyboard:inst7|count_idle[8]                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_clk|counter_out[7]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |snake|ps2_keyboard:inst7|debounce:debounce_ps2_data|counter_out[7] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |snake|hw_image_generator:inst19|local_next_direction[1]            ;
-; 12:1               ; 31 bits   ; 248 LEs       ; 0 LEs                ; 248 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_length[29]                   ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[19][2]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[1][1]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[2][8]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[3][8]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[4][8]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[5][3]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[6][1]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[7][8]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[8][5]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[9][3]                      ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[18][5]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[17][0]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[16][4]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[15][6]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[14][7]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[13][3]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[12][5]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[11][8]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_x[10][8]                     ;
-; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst19|snake_y[20][4]                     ;
-; 14:1               ; 5 bits    ; 45 LEs        ; 40 LEs               ; 5 LEs                  ; Yes        ; |snake|hw_image_generator:inst19|snake_x[0][4]                      ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; Yes        ; |snake|hw_image_generator:inst19|snake_y[0][8]                      ;
-; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |snake|hw_image_generator:inst19|snake_x[0][2]                      ;
-; 14:1               ; 6 bits    ; 54 LEs        ; 48 LEs               ; 6 LEs                  ; Yes        ; |snake|hw_image_generator:inst19|snake_y[0][4]                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |snake|hw_image_generator:inst10|local_next_direction[0]            ;
+; 12:1               ; 63 bits   ; 504 LEs       ; 0 LEs                ; 504 LEs                ; Yes        ; |snake|hw_image_generator:inst10|score[4]                           ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[19][4]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[1][5]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[2][8]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[3][8]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[4][6]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[5][7]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[6][5]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[7][5]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[8][6]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[9][5]                      ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[18][7]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[17][4]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[16][7]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[15][1]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[14][5]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[13][7]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[12][6]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[11][5]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_x[10][0]                     ;
+; 12:1               ; 17 bits   ; 136 LEs       ; 0 LEs                ; 136 LEs                ; Yes        ; |snake|hw_image_generator:inst10|snake_y[20][6]                     ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 40 LEs               ; 5 LEs                  ; Yes        ; |snake|hw_image_generator:inst10|snake_x[0][8]                      ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; Yes        ; |snake|hw_image_generator:inst10|snake_y[0][8]                      ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; Yes        ; |snake|hw_image_generator:inst10|snake_x[0][6]                      ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 48 LEs               ; 6 LEs                  ; Yes        ; |snake|hw_image_generator:inst10|snake_y[0][7]                      ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |snake|vga_controller:inst|v_count                                  ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |snake|hw_image_generator:inst19|green[7]                           ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |snake|hw_image_generator:inst10|green[7]                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -739,7 +802,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: hw_image_generator:inst19 ;
+; Parameter Settings for User Entity Instance: hw_image_generator:inst10 ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
@@ -781,7 +844,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Mod0 ;
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod2 ;
 +------------------------+----------------+--------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                             ;
 +------------------------+----------------+--------------------------------------------------+
@@ -804,7 +867,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div2 ;
 +------------------------+----------------+--------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                             ;
 +------------------------+----------------+--------------------------------------------------+
@@ -827,7 +890,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Mod1 ;
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod0 ;
 +------------------------+----------------+--------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                             ;
 +------------------------+----------------+--------------------------------------------------+
@@ -850,7 +913,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst19|lpm_divide:Div1 ;
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                          ;
+; LPM_WIDTHD             ; 5              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                          ;
+; LPM_WIDTHD             ; 32             ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_uio ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: hw_image_generator:inst10|lpm_divide:Div1 ;
 +------------------------+----------------+--------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                             ;
 +------------------------+----------------+--------------------------------------------------+
@@ -916,41 +1025,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 604                         ;
+; arriav_ff             ; 636                         ;
 ;     ENA               ; 53                          ;
-;     ENA SCLR          ; 388                         ;
+;     ENA SCLR          ; 420                         ;
 ;     ENA SCLR SLD      ; 9                           ;
 ;     ENA SLD           ; 53                          ;
 ;     SCLR              ; 41                          ;
 ;     SCLR SLD          ; 10                          ;
 ;     plain             ; 50                          ;
-; arriav_lcell_comb     ; 8719                        ;
-;     arith             ; 3721                        ;
-;         0 data inputs ; 277                         ;
-;         1 data inputs ; 1895                        ;
-;         2 data inputs ; 229                         ;
-;         3 data inputs ; 602                         ;
-;         4 data inputs ; 718                         ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 4934                        ;
+; arriav_lcell_comb     ; 10676                       ;
+;     arith             ; 4654                        ;
+;         0 data inputs ; 392                         ;
+;         1 data inputs ; 1987                        ;
+;         2 data inputs ; 326                         ;
+;         3 data inputs ; 898                         ;
+;         4 data inputs ; 1051                        ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 5947                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 1399                        ;
-;         3 data inputs ; 260                         ;
-;         4 data inputs ; 1697                        ;
-;         5 data inputs ; 478                         ;
-;         6 data inputs ; 1087                        ;
-;     shared            ; 62                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 31                          ;
+;         2 data inputs ; 2017                        ;
+;         3 data inputs ; 362                         ;
+;         4 data inputs ; 1953                        ;
+;         5 data inputs ; 499                         ;
+;         6 data inputs ; 1103                        ;
+;     shared            ; 72                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 39                          ;
 ;         2 data inputs ; 27                          ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 32                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 199.40                      ;
-; Average LUT depth     ; 152.61                      ;
+; Average LUT depth     ; 137.41                      ;
 +-----------------------+-----------------------------+
 
 
@@ -959,7 +1068,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:22     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -969,7 +1078,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Dec  8 04:10:17 2024
+    Info: Processing started: Sun Dec  8 15:03:07 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off snake -c snake
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1063,64 +1172,114 @@ Info (12133): Instantiated megafunction "clock50to25:inst3|clock50to25_pll_0:pll
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:inst19"
-Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(55): used explicit default value for signal "fruit_width" because signal was never assigned a value File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 55
-Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(56): used explicit default value for signal "fruit_height" because signal was never assigned a value File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 56
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(248): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 248
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(249): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 249
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(253): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 253
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(254): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 254
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(258): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 258
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(259): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 259
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(263): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 263
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(264): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 264
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(268): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 268
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(269): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 269
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(273): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 273
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(274): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 274
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(278): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 278
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(279): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 279
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(283): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 283
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(284): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 284
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(288): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 288
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(289): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 289
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(293): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 293
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(294): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 294
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(298): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 298
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(299): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 299
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(303): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 303
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(304): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 304
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(308): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 308
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(309): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 309
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(313): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 313
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(314): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 314
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(318): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(319): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 319
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(323): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 323
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(324): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 324
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(328): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 328
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(329): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 329
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(333): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 333
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(334): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 334
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(338): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 338
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(339): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 339
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(343): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 343
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(344): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 344
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(350): signal "fruit_y_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 350
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(350): signal "fruit_height" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 350
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(351): signal "fruit_x_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 351
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(351): signal "fruit_width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 351
+Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:inst10"
+Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(57): used explicit default value for signal "fruit_width" because signal was never assigned a value File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 57
+Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(58): used explicit default value for signal "fruit_height" because signal was never assigned a value File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(468): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 468
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(469): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 469
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(473): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 473
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(474): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 474
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(478): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 478
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(479): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 479
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(483): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 483
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(484): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 484
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(488): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 488
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(489): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 489
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(493): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 493
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(494): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 494
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(498): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 498
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(499): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 499
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(503): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 503
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(504): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 504
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(508): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 508
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(509): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 509
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(513): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 513
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(514): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 514
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(518): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 518
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(519): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 519
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(523): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 523
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(524): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 524
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(528): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 528
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(529): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 529
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(533): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 533
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(534): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 534
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(538): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 538
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(539): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 539
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(543): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 543
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(544): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 544
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(548): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 548
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(549): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 549
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(553): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 553
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(554): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 554
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(558): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 558
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(559): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 559
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(563): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 563
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(564): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 564
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(570): signal "fruit_y_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 570
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(570): signal "fruit_height" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 570
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(571): signal "fruit_x_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 571
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(571): signal "fruit_width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 571
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(595): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 595
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(598): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 598
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(599): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 599
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(693): signal "digit1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 693
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(711): signal "digit2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 711
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(462): inferring latch(es) for signal or variable "local_score", which holds its previous value in one or more paths through the process File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(462): inferring latch(es) for signal or variable "digit1", which holds its previous value in one or more paths through the process File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(462): inferring latch(es) for signal or variable "digit2", which holds its previous value in one or more paths through the process File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit2[0]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit2[1]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit2[2]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit2[3]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit1[0]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit1[1]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit1[2]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "digit1[3]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[0]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[1]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[2]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[3]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[4]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[5]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[6]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[7]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[8]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[9]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[10]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[11]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[12]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[13]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[14]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[15]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[16]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[17]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[18]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[19]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[20]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[21]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[22]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[23]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[24]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[25]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[26]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[27]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[28]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[29]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[30]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
+Info (10041): Inferred latch for "local_score[31]" at hw_image_generator.vhd(462) File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 462
 Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "ps2_keyboard:inst7"
 Info (12128): Elaborating entity "debounce" for hierarchy "ps2_keyboard:inst7|debounce:debounce_ps2_clk" File: D:/QUARTUS_ESv1/ps2_keyboard.vhd Line: 67
 Info (12128): Elaborating entity "Clock_Divider" for hierarchy "Clock_Divider:inst4"
 Warning (10492): VHDL Process Statement warning at Clock_Divider.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/QUARTUS_ES/Clock_Divider.vhd Line: 29
-Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst19|Mod0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst19|Div0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst19|Mod1" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 207
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst19|Div1" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 207
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst19|lpm_divide:Mod0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
-Info (12133): Instantiated megafunction "hw_image_generator:inst19|lpm_divide:Mod0" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Mod2" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 599
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Div2" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 598
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Mod0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Div0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Mod1" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 427
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst10|Div1" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 427
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst10|lpm_divide:Mod2" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 599
+Info (12133): Instantiated megafunction "hw_image_generator:inst10|lpm_divide:Mod2" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 599
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1134,8 +1293,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_o2f File: D:/QUARTUS_ESv1/db/alt_u_div_o2f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
     Info (12023): Found entity 1: lpm_abs_4p9 File: D:/QUARTUS_ESv1/db/lpm_abs_4p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst19|lpm_divide:Div0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
-Info (12133): Instantiated megafunction "hw_image_generator:inst19|lpm_divide:Div0" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 206
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst10|lpm_divide:Div2" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 598
+Info (12133): Instantiated megafunction "hw_image_generator:inst10|lpm_divide:Div2" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 598
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1149,6 +1308,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_ove File: D:/QUARTUS_ESv1/db/alt_u_div_ove.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
     Info (12023): Found entity 1: lpm_abs_kn9 File: D:/QUARTUS_ESv1/db/lpm_abs_kn9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst10|lpm_divide:Mod0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+Info (12133): Instantiated megafunction "hw_image_generator:inst10|lpm_divide:Mod0" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst10|lpm_divide:Div0" File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+Info (12133): Instantiated megafunction "hw_image_generator:inst10|lpm_divide:Div0" with the following parameter: File: D:/QUARTUS_ESv1/hw_image_generator.vhd Line: 426
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "n_blank" is stuck at VCC
@@ -1158,16 +1331,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 9136 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 11093 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 9101 logic cells
+    Info (21061): Implemented 11058 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 4966 megabytes
-    Info: Processing ended: Sun Dec  8 04:10:50 2024
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4975 megabytes
+    Info: Processing ended: Sun Dec  8 15:03:42 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:36
 
 

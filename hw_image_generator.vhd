@@ -37,7 +37,9 @@ ARCHITECTURE behavior OF hw_image_generator IS
 	 
 
 
-
+	SIGNAL digit1 : INTEGER RANGE 0 TO 9;
+    SIGNAL digit2 : INTEGER RANGE 0 TO 9;
+    SIGNAL local_score : INTEGER;
 	 
     CONSTANT fruit_x_bound : INTEGER := game_space_x_end - game_space_x_start - 20;
     CONSTANT fruit_y_bound : INTEGER := game_space_y_end - game_space_y_start - 20;
@@ -67,60 +69,278 @@ ARCHITECTURE behavior OF hw_image_generator IS
     SIGNAL random_seed : INTEGER := 1;
 
 	 
-	 -- Each character is represented as a 7-bit value for 5 columns of pixels (5x7 grid)
-TYPE character_font IS ARRAY (0 TO 6) OF STD_LOGIC_VECTOR(4 DOWNTO 0);  -- 5x7 grid for each character
+	 
+-- Larger character definitions for "S", "C", "O", "R", "E"
+TYPE character_font_large IS ARRAY (0 TO 13) OF STD_LOGIC_VECTOR(9 DOWNTO 0);  -- 10x14 grid for each character
 
--- Character definitions for "S", "C", "O", "R", "E" in 5x7 pixel font
-CONSTANT S_FONT : character_font := (
-    "11111",  -- Top row (5 pixels on)
-    "10000",  -- Second row (1 pixel on)
-    "11111",  -- Third row (5 pixels on)
-    "00001",  -- Fourth row (1 pixel on)
-    "11111",  -- Fifth row (5 pixels on)
-    "10000",  -- Sixth row (1 pixel on)
-    "11111"   -- Seventh row (5 pixels on)
+CONSTANT S_FONT_LARGE : character_font_large := (
+    "0011111100",  -- Row 0
+    "1111111111",  -- Row 1
+    "1100000011",  -- Row 2
+    "1100000011",  -- Row 3
+    "1100000000",  -- Row 4
+    "1111110000",  -- Row 5
+    "0011111100",  -- Row 6
+    "0000001100",  -- Row 7
+    "0000000011",  -- Row 8
+    "0000000011",  -- Row 9
+    "1100000011",  -- Row 10
+    "1111111111",  -- Row 11
+    "0011111100",  -- Row 12
+    "0000000000"   -- Row 13
 );
 
-CONSTANT C_FONT : character_font := (
-    "11111",  -- Top row (5 pixels on)
-    "10000",  -- Second row (1 pixel on)
-    "10000",  -- Third row (1 pixel on)
-    "10000",  -- Fourth row (1 pixel on)
-    "10000",  -- Fifth row (1 pixel on)
-    "10000",  -- Sixth row (1 pixel on)
-    "11111"   -- Seventh row (5 pixels on)
+CONSTANT C_FONT_LARGE : character_font_large := (
+    "1111111111",  -- Row 0
+    "1111111111",  -- Row 1
+    "1100000011",  -- Row 2
+    "1100000000",  -- Row 3
+    "1100000000",  -- Row 4
+    "1100000000",  -- Row 5
+    "1100000000",  -- Row 6
+    "1100000000",  -- Row 7
+    "1100000000",  -- Row 8
+    "1100000000",  -- Row 9
+    "1100000011",  -- Row 10
+    "1111111111",  -- Row 11
+    "1111111111",  -- Row 12
+    "0000000000"   -- Row 13
 );
 
-CONSTANT O_FONT : character_font := (
-    "11111",  -- Top row (5 pixels on)
-    "10001",  -- Second row (1 pixel on)
-    "10001",  -- Third row (1 pixel on)
-    "10001",  -- Fourth row (1 pixel on)
-    "10001",  -- Fifth row (1 pixel on)
-    "10001",  -- Sixth row (1 pixel on)
-    "11111"   -- Seventh row (5 pixels on)
+-- Similar definitions for O, R, E (I'll omit them for brevity)
+CONSTANT O_FONT_LARGE : character_font_large := (
+    "0111111110",  -- Row 0
+    "1111111111",  -- Row 1
+    "1100000011",  -- Row 2
+    "1100000011",  -- Row 3
+    "1100000011",  -- Row 4
+    "1100000011",  -- Row 5
+    "1100000011",  -- Row 6
+    "1100000011",  -- Row 7
+    "1100000011",  -- Row 8
+    "1100000011",  -- Row 9
+    "1100000011",  -- Row 10
+    "1111111111",  -- Row 11
+    "0111111110",  -- Row 12
+    "0000000000"   -- Row 13
 );
 
-CONSTANT R_FONT : character_font := (
-    "11111",  -- Top row (5 pixels on)
-    "10001",  -- Second row (1 pixel on)
-    "11111",  -- Third row (5 pixels on)
-    "10001",  -- Fourth row (1 pixel on)
-    "10001",  -- Fifth row (1 pixel on)
-    "10001",  -- Sixth row (1 pixel on)
-    "10001"   -- Seventh row (1 pixel on)
+CONSTANT R_FONT_LARGE : character_font_large := (
+    "1111111111",  -- Row 0
+    "1111111111",  -- Row 1
+    "1100000011",  -- Row 2
+    "1100000011",  -- Row 3
+    "1111111110",  -- Row 4
+    "1111111100",  -- Row 5
+    "1100001110",  -- Row 6
+    "1100000011",  -- Row 7
+    "1100000011",  -- Row 8
+    "1100000011",  -- Row 9
+    "1100000011",  -- Row 10
+    "1100000011",  -- Row 11
+    "1100000011",  -- Row 12
+    "0000000000"   -- Row 13
 );
 
-CONSTANT E_FONT : character_font := (
-    "11111",  -- Top row (5 pixels on)
-    "10000",  -- Second row (1 pixel on)
-    "11110",  -- Third row (4 pixels on)
-    "10000",  -- Fourth row (1 pixel on)
-    "10000",  -- Fifth row (1 pixel on)
-    "10000",  -- Sixth row (1 pixel on)
-    "11111"   -- Seventh row (5 pixels on)
+CONSTANT E_FONT_LARGE : character_font_large := (
+    "1111111111",  -- Row 0
+    "1111111111",  -- Row 1
+    "1000000000",  -- Row 2
+    "1000000000",  -- Row 3
+    "1000000000",  -- Row 4
+    "1000000000",  -- Row 5
+    "1111111000",  -- Row 6
+    "1111111000",  -- Row 7
+    "1000000000",  -- Row 8
+    "1000000000",  -- Row 9
+    "1000000000",  -- Row 10
+    "1111111111",  -- Row 11
+    "1111111111",  -- Row 12
+    "0000000000"   -- Row 13
 );
 
+TYPE digit_font_array IS ARRAY (0 TO 9) OF character_font_large;
+-- Large digit definitions (0-9) in 10x14 grid
+CONSTANT DIGIT_FONT_LARGE : digit_font_array := (
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000011",  -- Row 2
+        "1100000011",  -- Row 3
+        "1100000011",  -- Row 4
+        "1100000011",  -- Row 5
+        "1100000011",  -- Row 6
+        "1100000011",  -- Row 7
+        "1100000011",  -- Row 8
+        "1100000011",  -- Row 9
+        "1100000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 1
+    (
+        "0000000011",  -- Row 0
+        "0000000011",  -- Row 1
+        "0000000011",  -- Row 2
+        "0000000011",  -- Row 3
+        "0000000011",  -- Row 4
+        "0000000011",  -- Row 5
+        "0000000011",  -- Row 6
+        "0000000011",  -- Row 7
+        "0000000011",  -- Row 8
+        "0000000011",  -- Row 9
+        "0000000011",  -- Row 10
+        "0000000011",  -- Row 11
+        "0000000011",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 2
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000011",  -- Row 2
+        "0000000011",  -- Row 3
+        "0000000011",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "1100000000",  -- Row 7
+        "1100000000",  -- Row 8
+        "1100000000",  -- Row 9
+        "1100000001",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 3
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "0000000011",  -- Row 2
+        "0000000011",  -- Row 3
+        "0000000011",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "0000000011",  -- Row 7
+        "0000000011",  -- Row 8
+        "0000000011",  -- Row 9
+        "0000000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 4
+    (
+        "1100000011",  -- Row 0
+        "1100000011",  -- Row 1
+        "1100000011",  -- Row 2
+        "1100000011",  -- Row 3
+        "1111111111",  -- Row 4
+        "1111111111",  -- Row 5
+        "0000000011",  -- Row 6
+        "0000000011",  -- Row 7
+        "0000000011",  -- Row 8
+        "0000000011",  -- Row 9
+        "0000000011",  -- Row 10
+        "0000000011",  -- Row 11
+        "0000000011",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 5
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000000",  -- Row 2
+        "1100000000",  -- Row 3
+        "1100000000",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "0000000011",  -- Row 7
+        "0000000011",  -- Row 8
+        "0000000011",  -- Row 9
+        "1000000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 6
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000000",  -- Row 2
+        "1100000000",  -- Row 3
+        "1100000000",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "1100000011",  -- Row 7
+        "1100000011",  -- Row 8
+        "1100000011",  -- Row 9
+        "1100000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 7
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "0000000011",  -- Row 2
+        "0000000011",  -- Row 3
+        "0000000011",  -- Row 4
+        "0000000110",  -- Row 5
+        "0000001100",  -- Row 6
+        "0000011000",  -- Row 7
+        "0000110000",  -- Row 8
+        "0001100000",  -- Row 9
+        "0011000000",  -- Row 10
+        "0110000000",  -- Row 11
+        "1100000000",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 8
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000011",  -- Row 2
+        "1100000011",  -- Row 3
+        "1100000011",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "1100000011",  -- Row 7
+        "1100000011",  -- Row 8
+        "1100000011",  -- Row 9
+        "1100000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    ),
+    
+    -- 9
+    (
+        "1111111111",  -- Row 0
+        "1111111111",  -- Row 1
+        "1100000011",  -- Row 2
+        "1100000011",  -- Row 3
+        "1100000011",  -- Row 4
+        "1111111111",  -- Row 5
+        "1111111111",  -- Row 6
+        "0000000011",  -- Row 7
+        "0000000011",  -- Row 8
+        "0000000011",  -- Row 9
+        "0000000011",  -- Row 10
+        "1111111111",  -- Row 11
+        "1111111111",  -- Row 12
+        "0000000000"   -- Row 13
+    )
+);
 	 
 	 
 BEGIN
@@ -369,12 +589,19 @@ process(ps2_clk, ps2_code, ps2_code_new)
 					   -- "SCORE" section logic
              -- "SCORE" section logic
 ELSIF column >= score_x_start AND column <= score_x_end AND
-      row >= score_y_start AND row < score_y_start + 7 THEN
+      row >= score_y_start AND row < score_y_start + 14 THEN
+		
+		 
+			 local_score <= score;
+			 
+			 -- Extract tens and ones digits
+			 digit1 <= local_score / 10;  -- Tens place
+			 digit2 <= local_score MOD 10;  -- Ones place
     -- Determine the current character column with added spacing
     CASE column - score_x_start IS
-        -- Draw "S" (0-4) with space after
-        WHEN 0 TO 4 =>
-            IF S_FONT(row - score_y_start)(4 - (column - score_x_start)) = '1' THEN
+        -- Draw "S" (0-9) with space after
+        WHEN 0 TO 9 =>
+            IF S_FONT_LARGE(row - score_y_start)(9 - (column - score_x_start)) = '1' THEN
                 red <= (OTHERS => '1');
                 green <= (OTHERS => '1');
                 blue <= (OTHERS => '1');
@@ -384,15 +611,15 @@ ELSIF column >= score_x_start AND column <= score_x_end AND
                 blue <= (OTHERS => '0');
             END IF;
         
-        -- Space after S (5)
-        WHEN 5 =>
+        -- Space after S (10)
+        WHEN 10 =>
             red <= (OTHERS => '0');
             green <= (OTHERS => '0');
             blue <= (OTHERS => '0');
         
-        -- Draw "C" (6-10) with space after
-        WHEN 6 TO 10 =>
-            IF C_FONT(row - score_y_start)(4 - (column - (score_x_start + 6))) = '1' THEN
+        -- Draw "C" (11-20) with space after
+        WHEN 11 TO 20 =>
+            IF C_FONT_LARGE(row - score_y_start)(9 - (column - (score_x_start + 11))) = '1' THEN
                 red <= (OTHERS => '1');
                 green <= (OTHERS => '1');
                 blue <= (OTHERS => '1');
@@ -402,15 +629,15 @@ ELSIF column >= score_x_start AND column <= score_x_end AND
                 blue <= (OTHERS => '0');
             END IF;
         
-        -- Space after C (11)
-        WHEN 11 =>
+        -- Space after C (21)
+        WHEN 21 =>
             red <= (OTHERS => '0');
             green <= (OTHERS => '0');
             blue <= (OTHERS => '0');
         
-        -- Draw "O" (12-16) with space after
-        WHEN 12 TO 16 =>
-            IF O_FONT(row - score_y_start)(4 - (column - (score_x_start + 12))) = '1' THEN
+        -- Draw "O" (22-31) with space after
+        WHEN 22 TO 31 =>
+            IF O_FONT_LARGE(row - score_y_start)(9 - (column - (score_x_start + 22))) = '1' THEN
                 red <= (OTHERS => '1');
                 green <= (OTHERS => '1');
                 blue <= (OTHERS => '1');
@@ -420,15 +647,15 @@ ELSIF column >= score_x_start AND column <= score_x_end AND
                 blue <= (OTHERS => '0');
             END IF;
         
-        -- Space after O (17)
-        WHEN 17 =>
+        -- Space after O (32)
+        WHEN 32 =>
             red <= (OTHERS => '0');
             green <= (OTHERS => '0');
             blue <= (OTHERS => '0');
         
-        -- Draw "R" (18-22) with space after
-        WHEN 18 TO 22 =>
-            IF R_FONT(row - score_y_start)(4 - (column - (score_x_start + 18))) = '1' THEN
+        -- Draw "R" (33-42) with space after
+        WHEN 33 TO 42 =>
+            IF R_FONT_LARGE(row - score_y_start)(9 - (column - (score_x_start + 33))) = '1' THEN
                 red <= (OTHERS => '1');
                 green <= (OTHERS => '1');
                 blue <= (OTHERS => '1');
@@ -438,15 +665,50 @@ ELSIF column >= score_x_start AND column <= score_x_end AND
                 blue <= (OTHERS => '0');
             END IF;
         
-        -- Space after R (23)
-        WHEN 23 =>
+        -- Space after R (43)
+        WHEN 43 =>
             red <= (OTHERS => '0');
             green <= (OTHERS => '0');
             blue <= (OTHERS => '0');
         
-        -- Draw "E" (24-28)
-        WHEN 24 TO 28 =>
-            IF E_FONT(row - score_y_start)(4 - (column - (score_x_start + 24))) = '1' THEN
+        -- Draw "E" (44-53)
+        WHEN 44 TO 53 =>
+            IF E_FONT_LARGE(row - score_y_start)(9 - (column - (score_x_start + 44))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        WHEN 54 TO 59 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- First digit (tens place) from column 60-69
+        WHEN 60 TO 69 =>
+            IF DIGIT_FONT_LARGE(digit1)(row - score_y_start)(9 - (column - (score_x_start + 60))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        -- Space after first digit
+        WHEN 70 TO 74 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- Second digit (ones place) from column 75-84
+        WHEN 75 TO 84 =>
+            IF DIGIT_FONT_LARGE(digit2)(row - score_y_start)(9 - (column - (score_x_start + 75))) = '1' THEN
                 red <= (OTHERS => '1');
                 green <= (OTHERS => '1');
                 blue <= (OTHERS => '1');
