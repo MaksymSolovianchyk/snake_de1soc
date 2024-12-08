@@ -29,6 +29,16 @@ ARCHITECTURE behavior OF hw_image_generator IS
     CONSTANT game_space_y_end : INTEGER := 480;
     CONSTANT wall_thickness : INTEGER := 10;
 	 
+	--score text area definitions
+	 CONSTANT score_x_start : INTEGER := 500;
+	 CONSTANT score_x_end : INTEGER := 619;
+	 CONSTANT score_y_start : INTEGER := 100;
+	 CONSTANT score_y_end : INTEGER := 150;
+	 
+
+
+
+	 
     CONSTANT fruit_x_bound : INTEGER := game_space_x_end - game_space_x_start - 20;
     CONSTANT fruit_y_bound : INTEGER := game_space_y_end - game_space_y_start - 20;
 
@@ -56,6 +66,63 @@ ARCHITECTURE behavior OF hw_image_generator IS
     -- Random seed
     SIGNAL random_seed : INTEGER := 1;
 
+	 
+	 -- Each character is represented as a 7-bit value for 5 columns of pixels (5x7 grid)
+TYPE character_font IS ARRAY (0 TO 6) OF STD_LOGIC_VECTOR(4 DOWNTO 0);  -- 5x7 grid for each character
+
+-- Character definitions for "S", "C", "O", "R", "E" in 5x7 pixel font
+CONSTANT S_FONT : character_font := (
+    "11111",  -- Top row (5 pixels on)
+    "10000",  -- Second row (1 pixel on)
+    "11111",  -- Third row (5 pixels on)
+    "00001",  -- Fourth row (1 pixel on)
+    "11111",  -- Fifth row (5 pixels on)
+    "10000",  -- Sixth row (1 pixel on)
+    "11111"   -- Seventh row (5 pixels on)
+);
+
+CONSTANT C_FONT : character_font := (
+    "11111",  -- Top row (5 pixels on)
+    "10000",  -- Second row (1 pixel on)
+    "10000",  -- Third row (1 pixel on)
+    "10000",  -- Fourth row (1 pixel on)
+    "10000",  -- Fifth row (1 pixel on)
+    "10000",  -- Sixth row (1 pixel on)
+    "11111"   -- Seventh row (5 pixels on)
+);
+
+CONSTANT O_FONT : character_font := (
+    "11111",  -- Top row (5 pixels on)
+    "10001",  -- Second row (1 pixel on)
+    "10001",  -- Third row (1 pixel on)
+    "10001",  -- Fourth row (1 pixel on)
+    "10001",  -- Fifth row (1 pixel on)
+    "10001",  -- Sixth row (1 pixel on)
+    "11111"   -- Seventh row (5 pixels on)
+);
+
+CONSTANT R_FONT : character_font := (
+    "11111",  -- Top row (5 pixels on)
+    "10001",  -- Second row (1 pixel on)
+    "11111",  -- Third row (5 pixels on)
+    "10001",  -- Fourth row (1 pixel on)
+    "10001",  -- Fifth row (1 pixel on)
+    "10001",  -- Sixth row (1 pixel on)
+    "10001"   -- Seventh row (1 pixel on)
+);
+
+CONSTANT E_FONT : character_font := (
+    "11111",  -- Top row (5 pixels on)
+    "10000",  -- Second row (1 pixel on)
+    "11110",  -- Third row (4 pixels on)
+    "10000",  -- Fourth row (1 pixel on)
+    "10000",  -- Fifth row (1 pixel on)
+    "10000",  -- Sixth row (1 pixel on)
+    "11111"   -- Seventh row (5 pixels on)
+);
+
+	 
+	 
 BEGIN
     -- Direction control logi
 process(ps2_clk, ps2_code, ps2_code_new)
@@ -293,16 +360,113 @@ process(ps2_clk, ps2_code, ps2_code_new)
                     red <= (OTHERS => '1');
                     green <= (OTHERS => '1');
                     blue <= (OTHERS => '1');
-                ELSE
+                ELSe
                     red <= (OTHERS => '0');
                     green <= (OTHERS => '0');
                     blue <= (OTHERS => '0');
                 END IF;
+					 
+					   -- "SCORE" section logic
+             -- "SCORE" section logic
+ELSIF column >= score_x_start AND column <= score_x_end AND
+      row >= score_y_start AND row < score_y_start + 7 THEN
+    -- Determine the current character column with added spacing
+    CASE column - score_x_start IS
+        -- Draw "S" (0-4) with space after
+        WHEN 0 TO 4 =>
+            IF S_FONT(row - score_y_start)(4 - (column - score_x_start)) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
             ELSE
                 red <= (OTHERS => '0');
                 green <= (OTHERS => '0');
                 blue <= (OTHERS => '0');
             END IF;
+        
+        -- Space after S (5)
+        WHEN 5 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- Draw "C" (6-10) with space after
+        WHEN 6 TO 10 =>
+            IF C_FONT(row - score_y_start)(4 - (column - (score_x_start + 6))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        -- Space after C (11)
+        WHEN 11 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- Draw "O" (12-16) with space after
+        WHEN 12 TO 16 =>
+            IF O_FONT(row - score_y_start)(4 - (column - (score_x_start + 12))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        -- Space after O (17)
+        WHEN 17 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- Draw "R" (18-22) with space after
+        WHEN 18 TO 22 =>
+            IF R_FONT(row - score_y_start)(4 - (column - (score_x_start + 18))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        -- Space after R (23)
+        WHEN 23 =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+        
+        -- Draw "E" (24-28)
+        WHEN 24 TO 28 =>
+            IF E_FONT(row - score_y_start)(4 - (column - (score_x_start + 24))) = '1' THEN
+                red <= (OTHERS => '1');
+                green <= (OTHERS => '1');
+                blue <= (OTHERS => '1');
+            ELSE
+                red <= (OTHERS => '0');
+                green <= (OTHERS => '0');
+                blue <= (OTHERS => '0');
+            END IF;
+        
+        WHEN OTHERS =>
+            red <= (OTHERS => '0');
+            green <= (OTHERS => '0');
+            blue <= (OTHERS => '0');
+    END CASE;
+ELSE
+    -- Default black background outside defined regions
+    red <= (OTHERS => '0');
+    green <= (OTHERS => '0');
+    blue <= (OTHERS => '0');
+END IF;
         ELSE
             red <= (OTHERS => '0');
             green <= (OTHERS => '0');
