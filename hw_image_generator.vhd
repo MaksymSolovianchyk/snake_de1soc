@@ -446,7 +446,7 @@ process(ps2_clk, ps2_code, ps2_code_new)
 					 snake_x <= (100, OTHERS => 0);
 					 snake_y <= (250, OTHERS => 0);
             END IF;
-				FOR i IN 1 TO 9 LOOP
+				FOR i IN 1 TO MAX_LENGTH LOOP
                 if i < snake_length then
                 IF (snake_x(0) = snake_x(i) AND snake_y(0) = snake_y(i)) THEN
                     score <= 0;

@@ -1,4 +1,4 @@
-/* Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition */
+/* Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/QUARTUS_ESv1/output_files/") File("snake.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("D:/snake_de1SoC/snake_de1soc/output_files/") File("snake.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

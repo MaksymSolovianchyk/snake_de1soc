@@ -1,6 +1,6 @@
 Flow report for snake
-Sun Dec  8 15:12:56 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Wed Dec 11 16:46:19 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun Dec  8 15:12:56 2024          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Flow Status                     ; Successful - Wed Dec 11 16:46:19 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; snake                                          ;
 ; Top-level Entity Name           ; snake                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 5,896 / 32,070 ( 18 % )                        ;
-; Total registers                 ; 768                                            ;
+; Logic utilization (in ALMs)     ; 6,088 / 32,070 ( 19 % )                        ;
+; Total registers                 ; 767                                            ;
 ; Total pins                      ; 32 / 457 ( 7 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
 ; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                                 ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                                 ;
 ; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
 +---------------------------------+------------------------------------------------+
 
@@ -68,40 +68,46 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/08/2024 15:03:08 ;
+; Start date & time ; 12/11/2024 16:35:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; snake               ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                      ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name ; Section Id                        ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 2546707165641.173366658822100                                 ; --            ; --          ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                           ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                          ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (VHDL)                                      ; <None>        ; --          ; --                                ;
-; EDA_TIME_SCALE                      ; 1 ps                                                          ; --            ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --          ; --                                ;
-; MISC_FILE                           ; clk50to25/synthesis/../clock50to25.cmp                        ; --            ; --          ; --                                ;
-; MISC_FILE                           ; clk50to25/synthesis/../../clock50to25.qsys                    ; --            ; --          ; --                                ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; --          ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; --          ; Top                               ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; --          ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --          ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --          ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --          ; --                                ;
-; SLD_FILE                            ; clk50to25/synthesis/clock50to25.debuginfo                     ; --            ; --          ; --                                ;
-; SLD_INFO                            ; QSYS_NAME clock50to25 HAS_SOPCINFO 1 GENERATION_ID 1733341395 ; --            ; clock50to25 ; --                                ;
-; SOPCINFO_FILE                       ; clk50to25/synthesis/../../clock50to25.sopcinfo                ; --            ; --          ; --                                ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --          ; --                                ;
-+-------------------------------------+---------------------------------------------------------------+---------------+-------------+-----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                        ;
++-------------------------------------+----------------------------------------------------------------+---------------+--------------+-----------------------------------+
+; Assignment Name                     ; Value                                                          ; Default Value ; Entity Name  ; Section Id                        ;
++-------------------------------------+----------------------------------------------------------------+---------------+--------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID               ; 2543164772463.173393135911352                                  ; --            ; --           ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                            ; --            ; --           ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                            ; --            ; --           ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                            ; --            ; --           ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                            ; --            ; --           ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                           ; --            ; --           ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (VHDL)                                       ; <None>        ; --           ; --                                ;
+; EDA_TIME_SCALE                      ; 1 ps                                                           ; --            ; --           ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                             ; --            ; --           ; --                                ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                              ; --            ; --           ; --                                ;
+; MISC_FILE                           ; clk50to108/synthesis/../clock50to150.cmp                       ; --            ; --           ; --                                ;
+; MISC_FILE                           ; clk50to108/synthesis/../../clock50to150.qsys                   ; --            ; --           ; --                                ;
+; MISC_FILE                           ; clk50to25/synthesis/../clock50to25.cmp                         ; --            ; --           ; --                                ;
+; MISC_FILE                           ; clk50to25/synthesis/../../clock50to25.qsys                     ; --            ; --           ; --                                ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                         ; --            ; --           ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                         ; --            ; --           ; Top                               ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                         ; --            ; --           ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                            ; --            ; --           ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                          ; --            ; --           ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                   ; --            ; --           ; --                                ;
+; SLD_FILE                            ; clk50to108/synthesis/clock50to150.debuginfo                    ; --            ; --           ; --                                ;
+; SLD_FILE                            ; clk50to25/synthesis/clock50to25.debuginfo                      ; --            ; --           ; --                                ;
+; SLD_INFO                            ; QSYS_NAME clock50to150 HAS_SOPCINFO 1 GENERATION_ID 1733919031 ; --            ; clock50to150 ; --                                ;
+; SLD_INFO                            ; QSYS_NAME clock50to25 HAS_SOPCINFO 1 GENERATION_ID 1733341395  ; --            ; clock50to25  ; --                                ;
+; SOPCINFO_FILE                       ; clk50to108/synthesis/../../clock50to150.sopcinfo               ; --            ; --           ; --                                ;
+; SOPCINFO_FILE                       ; clk50to25/synthesis/../../clock50to25.sopcinfo                 ; --            ; --           ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                             ; --            ; --           ; --                                ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                             ; --            ; --           ; --                                ;
++-------------------------------------+----------------------------------------------------------------+---------------+--------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -109,12 +115,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 4975 MB             ; 00:00:35                           ;
-; Fitter               ; 00:08:28     ; 1.3                     ; 6930 MB             ; 00:08:49                           ;
-; Assembler            ; 00:00:10     ; 1.0                     ; 4927 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:26     ; 3.2                     ; 5348 MB             ; 00:00:35                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4915 MB             ; 00:00:02                           ;
-; Total                ; 00:09:42     ; --                      ; --                  ; 00:10:08                           ;
+; Analysis & Synthesis ; 00:02:52     ; 1.1                     ; 4989 MB             ; 00:01:53                           ;
+; Fitter               ; 00:06:41     ; 1.3                     ; 6942 MB             ; 00:06:16                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4930 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:21     ; 3.0                     ; 5347 MB             ; 00:00:28                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4920 MB             ; 00:00:01                           ;
+; Total                ; 00:10:07     ; --                      ; --                  ; 00:08:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Maksym           ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Maksym           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Maksym           ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Maksym           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Maksym           ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-J1G8QFJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-J1G8QFJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-J1G8QFJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-J1G8QFJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-J1G8QFJ  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

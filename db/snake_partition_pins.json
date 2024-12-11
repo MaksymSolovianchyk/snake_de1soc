@@ -108,10 +108,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_in",
-					"strict" : false
-				},
-				{
 					"name" : "ps2clk",
 					"strict" : false
 				},

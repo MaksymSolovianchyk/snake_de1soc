@@ -1,5 +1,5 @@
-Analysis & Synthesis Status : Successful - Sun Dec  8 15:03:42 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Analysis & Synthesis Status : Successful - Wed Dec 11 16:38:53 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : snake
 Top-level Entity Name : snake
 Family : Cyclone V
@@ -13,5 +13,5 @@ Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1
+Total PLLs : 2
 Total DLLs : 0

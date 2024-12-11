@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Dec  8 15:12:11 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Fitter Status : Successful - Wed Dec 11 16:45:37 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : snake
 Top-level Entity Name : snake
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 5,896 / 32,070 ( 18 % )
-Total registers : 768
+Logic utilization (in ALMs) : 6,088 / 32,070 ( 19 % )
+Total registers : 767
 Total pins : 32 / 457 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
@@ -16,5 +16,5 @@ Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1 / 6 ( 17 % )
+Total PLLs : 2 / 6 ( 33 % )
 Total DLLs : 0 / 4 ( 0 % )

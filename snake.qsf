@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY snake
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:32:47  DECEMBER 04, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -90,15 +90,16 @@ set_location_assignment PIN_C10 -to n_sync
 set_location_assignment PIN_F10 -to n_blank
 set_location_assignment PIN_D11 -to V_sync
 set_location_assignment PIN_A11 -to pixel_clk
+set_location_assignment PIN_AD7 -to ps2clk
+set_location_assignment PIN_AE7 -to ps2data
+set_global_assignment -name QIP_FILE clk50to108/synthesis/clock50to150.qip
 set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
 set_global_assignment -name VHDL_FILE debounce.vhd
 set_global_assignment -name VHDL_FILE hw_image_generator.vhd
-set_global_assignment -name VHDL_FILE ../QUARTUS_ES/Clock_Divider.vhd
 set_global_assignment -name QIP_FILE clk50to25/synthesis/clock50to25.qip
-set_global_assignment -name VHDL_FILE "C:/Users/solma/Downloads/vga_controller.vhd"
 set_global_assignment -name BDF_FILE snake.bdf
-set_location_assignment PIN_AD7 -to ps2clk
-set_location_assignment PIN_AE7 -to ps2data
+set_global_assignment -name VHDL_FILE vga_controller.vhd
+set_global_assignment -name VHDL_FILE clock_divider.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
