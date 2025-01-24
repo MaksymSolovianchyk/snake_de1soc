@@ -10,5 +10,10 @@
         <assignment_value text="QSYS_NAME clock50to25 HAS_SOPCINFO 1 GENERATION_ID 1733341395"/>
       </assignment_values>
     </sld_info>
+    <sld_info hpath="hw_image_generator:inst11|pll:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME pll HAS_SOPCINFO 1 GENERATION_ID 1737676929"/>
+      </assignment_values>
+    </sld_info>
   </sld_infos>
 </sld_project_info>

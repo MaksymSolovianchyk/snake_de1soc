@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="58cd17650731269170e2"/>
+    <hash md5_digest_80b="ea244a08919ffc7ce333"/>
   </project>
   <file_info>
     <file device="5CSEMA5F31C6" path="snake.sof" usercode="0xFFFFFFFF"/>
@@ -15,6 +15,12 @@
     <sld_info hpath="clock50to25:inst3" name="inst3">
       <assignment_values>
         <assignment_value text="QSYS_NAME clock50to25 HAS_SOPCINFO 1 GENERATION_ID 1733341395"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+    <sld_info hpath="hw_image_generator:inst11|pll:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME pll HAS_SOPCINFO 1 GENERATION_ID 1737676929"/>
       </assignment_values>
       <parameters/>
     </sld_info>

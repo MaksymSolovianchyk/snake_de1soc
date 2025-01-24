@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Wed Dec 11 16:38:53 2024
+Analysis & Synthesis Status : Successful - Fri Jan 24 01:03:44 2025
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : snake
 Top-level Entity Name : snake
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 636
-Total pins : 32
+Total registers : 755
+Total pins : 65
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 2,297,680
 Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 2
+Total PLLs : 3
 Total DLLs : 0

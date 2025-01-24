@@ -56,10 +56,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_AA14 -to keys[0]
-set_location_assignment PIN_AA15 -to keys[1]
-set_location_assignment PIN_W15 -to keys[2]
-set_location_assignment PIN_Y16 -to keys[3]
 set_location_assignment PIN_AF14 -to clk_in
 set_location_assignment PIN_B13 -to blue[0]
 set_location_assignment PIN_G13 -to blue[1]
@@ -92,6 +88,10 @@ set_location_assignment PIN_D11 -to V_sync
 set_location_assignment PIN_A11 -to pixel_clk
 set_location_assignment PIN_AD7 -to ps2clk
 set_location_assignment PIN_AE7 -to ps2data
+set_global_assignment -name QSYS_FILE pll.qsys
+set_global_assignment -name VHDL_FILE i2c.vhd
+set_global_assignment -name VHDL_FILE clock_divider50to25.vhd
+set_global_assignment -name VHDL_FILE aud_gen.vhd
 set_global_assignment -name QIP_FILE clk50to108/synthesis/clock50to150.qip
 set_global_assignment -name VHDL_FILE ps2_keyboard.vhd
 set_global_assignment -name VHDL_FILE debounce.vhd
@@ -100,7 +100,95 @@ set_global_assignment -name QIP_FILE clk50to25/synthesis/clock50to25.qip
 set_global_assignment -name BDF_FILE snake.bdf
 set_global_assignment -name VHDL_FILE vga_controller.vhd
 set_global_assignment -name VHDL_FILE clock_divider.vhd
+set_location_assignment PIN_K7 -to AUD_ADCDAT
+set_location_assignment PIN_K8 -to AUD_ADCLRCK
+set_location_assignment PIN_H7 -to AUD_BCLK
+set_location_assignment PIN_J7 -to AUD_DACDAT
+set_location_assignment PIN_H8 -to AUD_DACLRCK
+set_location_assignment PIN_G7 -to AUD_XCK
+set_location_assignment PIN_J12 -to FPGA_I2C_SCLK
+set_location_assignment PIN_K12 -to FPGA_I2C_SDAT
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA16 -to clock_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to key
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ledr
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sw
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clock_50
+set_location_assignment PIN_AB12 -to SW[0]
+set_location_assignment PIN_AC12 -to SW[1]
+set_location_assignment PIN_AF9 -to SW[2]
+set_location_assignment PIN_AF10 -to SW[3]
+set_location_assignment PIN_AD11 -to SW[4]
+set_location_assignment PIN_AD12 -to SW[5]
+set_location_assignment PIN_AE11 -to SW[6]
+set_location_assignment PIN_AC9 -to SW[7]
+set_location_assignment PIN_AD10 -to SW[8]
+set_location_assignment PIN_AE12 -to SW[9]
+set_location_assignment PIN_V16 -to LEDR[0]
+set_location_assignment PIN_W16 -to LEDR[1]
+set_location_assignment PIN_V17 -to LEDR[2]
+set_location_assignment PIN_V18 -to LEDR[3]
+set_location_assignment PIN_W17 -to LEDR[4]
+set_location_assignment PIN_W19 -to LEDR[5]
+set_location_assignment PIN_Y19 -to LEDR[6]
+set_location_assignment PIN_W20 -to LEDR[7]
+set_location_assignment PIN_W21 -to LEDR[8]
+set_location_assignment PIN_Y21 -to LEDR[9]
+set_location_assignment PIN_AA14 -to KEY_N[0]
+set_location_assignment PIN_AA15 -to KEY_N[1]
+set_location_assignment PIN_W15 -to KEY_N[2]
+set_location_assignment PIN_Y16 -to KEY_N[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

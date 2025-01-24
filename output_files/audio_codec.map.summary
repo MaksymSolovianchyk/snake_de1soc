@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Jan 23 17:29:14 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : audio_codec
+Top-level Entity Name : audio_codec
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 118
+Total pins : 33
+Total virtual pins : 0
+Total block memory bits : 2,297,680
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

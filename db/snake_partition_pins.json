@@ -4,14 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "h_sync",
-					"strict" : false
-				},
-				{
-					"name" : "V_sync",
-					"strict" : false
-				},
-				{
 					"name" : "blue[7]",
 					"strict" : false
 				},
@@ -105,6 +97,66 @@
 				},
 				{
 					"name" : "red[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_I2C_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "h_sync",
+					"strict" : false
+				},
+				{
+					"name" : "V_sync",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_I2C_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[2]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[1]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY_N[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
