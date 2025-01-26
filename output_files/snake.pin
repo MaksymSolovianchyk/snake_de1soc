@@ -1,4 +1,4 @@
- -- Copyright (C) 2023  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2024  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
  -- and other software and tools, and any partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -74,7 +74,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 CHIP  "snake"  ASSIGNED TO AN: 5CSEMA5F31C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -129,7 +129,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 4A        :                
 GND                          : AA22      : gnd    :                   :         :           :                
-VCCPGM                       : AA23      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+VCCPGM                       : AA23      : power  :                   : 3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA25      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA26      :        :                   :         : 5B        :                
@@ -146,7 +146,7 @@ VCCA_FPLL                    : AB6       : power  :                   : 2.5V    
 GND                          : AB7       : gnd    :                   :         :           :                
 nCSO, DATA4                  : AB8       :        :                   :         : 3A        :                
 TDO                          : AB9       : output :                   :         : 3A        :                
-VCCPGM                       : AB10      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+VCCPGM                       : AB10      : power  :                   : 3.0V/3.3V :           :                
 VCC_AUX                      : AB11      : power  :                   : 2.5V    :           :                
 SW[0]                        : AB12      : input  : 3.3-V LVTTL       :         : 3A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3B        :                
@@ -625,7 +625,7 @@ AUD_DACDAT                   : J7        : output : 2.5 V             :         
 GND                          : J8        : gnd    :                   :         :           :                
 green[0]                     : J9        : output : 2.5 V             :         : 8A        : Y              
 green[1]                     : J10       : output : 2.5 V             :         : 8A        : Y              
-VCCPGM                       : J11       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+VCCPGM                       : J11       : power  :                   : 3.0V/3.3V :           :                
 FPGA_I2C_SCLK                : J12       : output : 2.5 V             :         : 8A        : Y              
 VCCIO8A                      : J13       : power  :                   : 2.5V    : 8A        :                
 blue[7]                      : J14       : output : 2.5 V             :         : 8A        : Y              
@@ -634,7 +634,7 @@ VCC_AUX                      : J16       : power  :                   : 2.5V    
 VCCPD7C_HPS                  : J17       : power  :                   : 2.5V    : 7C        :                
 GND                          : J18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 7B        :                
-VCCRSTCLK_HPS                : J20       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+VCCRSTCLK_HPS                : J20       : power  :                   : 3.0V/3.3V :           :                
 VCC_AUX_SHARED               : J21       : power  :                   : 2.5V    :           :                
 GND                          : J22       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J23       :        :                   :         : 6A        :                

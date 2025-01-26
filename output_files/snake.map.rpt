@@ -1,6 +1,6 @@
 Analysis & Synthesis report for snake
-Fri Jan 24 01:03:44 2025
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Sun Jan 26 20:38:28 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -59,7 +59,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -79,8 +79,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jan 24 01:03:44 2025          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Sun Jan 26 20:38:28 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; snake                                          ;
 ; Top-level Entity Name           ; snake                                          ;
 ; Family                          ; Cyclone V                                      ;
@@ -194,65 +194,64 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.22        ;
+; Average used               ; 1.28        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   6.6%      ;
-;     Processor 3            ;   6.5%      ;
-;     Processor 4            ;   3.2%      ;
-;     Processor 5            ;   3.0%      ;
-;     Processor 6            ;   2.8%      ;
+;     Processor 2            ;   9.1%      ;
+;     Processor 3            ;   7.0%      ;
+;     Processor 4            ;   4.0%      ;
+;     Processor 5            ;   4.0%      ;
+;     Processor 6            ;   3.7%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                 ;
-+--------------------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+--------------+
-; File Name with User-Entered Path                                         ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                      ; Library      ;
-+--------------------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+--------------+
-; i2c.vhd                                                                  ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/i2c.vhd                                              ;              ;
-; aud_gen.vhd                                                              ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/aud_gen.vhd                                          ;              ;
-; clk50to108/synthesis/clock50to150.vhd                                    ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/clock50to150.vhd                ; clock50to150 ;
-; clk50to108/synthesis/submodules/clock50to150_pll_0.v                     ; yes             ; User Verilog HDL File                  ; D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v ; clock50to150 ;
-; ps2_keyboard.vhd                                                         ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/ps2_keyboard.vhd                                     ;              ;
-; debounce.vhd                                                             ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/debounce.vhd                                         ;              ;
-; hw_image_generator.vhd                                                   ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd                               ;              ;
-; clk50to25/synthesis/clock50to25.vhd                                      ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/clock50to25.vhd                  ; clock50to25  ;
-; clk50to25/synthesis/submodules/clock50to25_pll_0.v                       ; yes             ; User Verilog HDL File                  ; D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v   ; clock50to25  ;
-; snake.bdf                                                                ; yes             ; User Block Diagram/Schematic File      ; D:/snake_de1SoC/snake_de1soc/snake.bdf                                            ;              ;
-; vga_controller.vhd                                                       ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/vga_controller.vhd                                   ;              ;
-; clock_divider.vhd                                                        ; yes             ; User VHDL File                         ; D:/snake_de1SoC/snake_de1soc/clock_divider.vhd                                    ;              ;
-; d:/snake_de1soc/snake_de1soc/db/ip/pll/pll.v                             ; yes             ; Auto-Found Verilog HDL File            ; d:/snake_de1soc/snake_de1soc/db/ip/pll/pll.v                                      ; pll          ;
-; d:/snake_de1soc/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v ; yes             ; Auto-Found Verilog HDL File            ; d:/snake_de1soc/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v          ; pll          ;
-; d:/snake_de1soc/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v            ; yes             ; Auto-Found Verilog HDL File            ; d:/snake_de1soc/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v                     ; pll          ;
-; altera_pll.v                                                             ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altera_pll.v                           ;              ;
-; altsyncram.tdf                                                           ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf                         ;              ;
-; stratix_ram_block.inc                                                    ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;              ;
-; lpm_mux.inc                                                              ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/lpm_mux.inc                            ;              ;
-; lpm_decode.inc                                                           ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/lpm_decode.inc                         ;              ;
-; aglobal231.inc                                                           ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/aglobal231.inc                         ;              ;
-; a_rdenreg.inc                                                            ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/a_rdenreg.inc                          ;              ;
-; altrom.inc                                                               ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altrom.inc                             ;              ;
-; altram.inc                                                               ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altram.inc                             ;              ;
-; altdpram.inc                                                             ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/altdpram.inc                           ;              ;
-; db/altsyncram_u3o1.tdf                                                   ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/altsyncram_u3o1.tdf                               ;              ;
-; mem.mif                                                                  ; yes             ; Auto-Found Memory Initialization File  ; D:/snake_de1SoC/snake_de1soc/mem.mif                                              ;              ;
-; db/decode_0na.tdf                                                        ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/decode_0na.tdf                                    ;              ;
-; db/mux_vib.tdf                                                           ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/mux_vib.tdf                                       ;              ;
-; lpm_divide.tdf                                                           ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf                         ;              ;
-; abs_divider.inc                                                          ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/abs_divider.inc                        ;              ;
-; sign_div_unsign.inc                                                      ; yes             ; Megafunction                           ; d:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;              ;
-; db/lpm_divide_uio.tdf                                                    ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/lpm_divide_uio.tdf                                ;              ;
-; db/abs_divider_4dg.tdf                                                   ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/abs_divider_4dg.tdf                               ;              ;
-; db/alt_u_div_o2f.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/alt_u_div_o2f.tdf                                 ;              ;
-; db/lpm_abs_4p9.tdf                                                       ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/lpm_abs_4p9.tdf                                   ;              ;
-; db/lpm_divide_bpo.tdf                                                    ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/lpm_divide_bpo.tdf                                ;              ;
-; db/abs_divider_kbg.tdf                                                   ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/abs_divider_kbg.tdf                               ;              ;
-; db/alt_u_div_ove.tdf                                                     ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/alt_u_div_ove.tdf                                 ;              ;
-; db/lpm_abs_kn9.tdf                                                       ; yes             ; Auto-Generated Megafunction            ; D:/snake_de1SoC/snake_de1soc/db/lpm_abs_kn9.tdf                                   ;              ;
-+--------------------------------------------------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
++-------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+--------------+
+; File Name with User-Entered Path                                        ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library      ;
++-------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+--------------+
+; i2c.vhd                                                                 ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/i2c.vhd                                              ;              ;
+; aud_gen.vhd                                                             ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/aud_gen.vhd                                          ;              ;
+; clk50to108/synthesis/clock50to150.vhd                                   ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/clk50to108/synthesis/clock50to150.vhd                ; clock50to150 ;
+; clk50to108/synthesis/submodules/clock50to150_pll_0.v                    ; yes             ; User Verilog HDL File              ; D:/snake_clone/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v ; clock50to150 ;
+; ps2_keyboard.vhd                                                        ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/ps2_keyboard.vhd                                     ;              ;
+; debounce.vhd                                                            ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/debounce.vhd                                         ;              ;
+; hw_image_generator.vhd                                                  ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/hw_image_generator.vhd                               ;              ;
+; clk50to25/synthesis/clock50to25.vhd                                     ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/clk50to25/synthesis/clock50to25.vhd                  ; clock50to25  ;
+; clk50to25/synthesis/submodules/clock50to25_pll_0.v                      ; yes             ; User Verilog HDL File              ; D:/snake_clone/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v   ; clock50to25  ;
+; snake.bdf                                                               ; yes             ; User Block Diagram/Schematic File  ; D:/snake_clone/snake_de1soc/snake.bdf                                            ;              ;
+; vga_controller.vhd                                                      ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/vga_controller.vhd                                   ;              ;
+; clock_divider.vhd                                                       ; yes             ; User VHDL File                     ; D:/snake_clone/snake_de1soc/clock_divider.vhd                                    ;              ;
+; d:/snake_clone/snake_de1soc/db/ip/pll/pll.v                             ; yes             ; Auto-Found Verilog HDL File        ; d:/snake_clone/snake_de1soc/db/ip/pll/pll.v                                      ; pll          ;
+; d:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v ; yes             ; Auto-Found Verilog HDL File        ; d:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v          ; pll          ;
+; d:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v            ; yes             ; Auto-Found Verilog HDL File        ; d:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v                     ; pll          ;
+; altera_pll.v                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v           ;              ;
+; altsyncram.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf         ;              ;
+; stratix_ram_block.inc                                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc  ;              ;
+; lpm_mux.inc                                                             ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc            ;              ;
+; lpm_decode.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc         ;              ;
+; aglobal231.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc         ;              ;
+; a_rdenreg.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc          ;              ;
+; altrom.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc             ;              ;
+; altram.inc                                                              ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc             ;              ;
+; altdpram.inc                                                            ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc           ;              ;
+; db/altsyncram_u3o1.tdf                                                  ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/altsyncram_u3o1.tdf                               ;              ;
+; db/decode_0na.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/decode_0na.tdf                                    ;              ;
+; db/mux_vib.tdf                                                          ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/mux_vib.tdf                                       ;              ;
+; lpm_divide.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf         ;              ;
+; abs_divider.inc                                                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc        ;              ;
+; sign_div_unsign.inc                                                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc    ;              ;
+; db/lpm_divide_uio.tdf                                                   ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/lpm_divide_uio.tdf                                ;              ;
+; db/abs_divider_4dg.tdf                                                  ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/abs_divider_4dg.tdf                               ;              ;
+; db/alt_u_div_o2f.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/alt_u_div_o2f.tdf                                 ;              ;
+; db/lpm_abs_4p9.tdf                                                      ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/lpm_abs_4p9.tdf                                   ;              ;
+; db/lpm_divide_bpo.tdf                                                   ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/lpm_divide_bpo.tdf                                ;              ;
+; db/abs_divider_kbg.tdf                                                  ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/abs_divider_kbg.tdf                               ;              ;
+; db/alt_u_div_ove.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/alt_u_div_ove.tdf                                 ;              ;
+; db/lpm_abs_kn9.tdf                                                      ; yes             ; Auto-Generated Megafunction        ; D:/snake_clone/snake_de1soc/db/lpm_abs_kn9.tdf                                   ;              ;
++-------------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------+
@@ -347,13 +346,13 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                             ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------+
-; Name                                                                                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                  ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------+
-; hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 143605       ; 16           ; --           ; --           ; 2297680 ; D:/snake_de1SoC/snake_de1soc/mem.mif ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+--------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
+; hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 143605       ; 16           ; --           ; --           ; 2297680 ; None ;
++--------------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +-------------------------------------------------+
@@ -370,19 +369,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                 ;
-+--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+---------------------------------------+
-; Vendor ; IP Core Name                 ; Version ; Release Date ; License Type ; Entity Instance                                                               ; IP Include File                       ;
-+--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+---------------------------------------+
-; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|clock50to25:inst3                                                      ; clock50to25.qsys                      ;
-; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0                              ; clock50to25.qsys                      ;
-; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|clock50to150:inst9                                                     ; clock50to150.qsys                     ;
-; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|clock50to150:inst9|clock50to150_pll_0:pll_0                            ; clock50to150.qsys                     ;
-; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0                                       ; D:/snake_de1SoC/snake_de1soc/pll.qsys ;
-; Altera ; altera_avalon_onchip_memory2 ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0 ; D:/snake_de1SoC/snake_de1soc/pll.qsys ;
-; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0                       ; D:/snake_de1SoC/snake_de1soc/pll.qsys ;
-+--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+---------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                ;
++--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+--------------------------------------+
+; Vendor ; IP Core Name                 ; Version ; Release Date ; License Type ; Entity Instance                                                               ; IP Include File                      ;
++--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+--------------------------------------+
+; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|clock50to25:inst3                                                      ; clock50to25.qsys                     ;
+; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|clock50to25:inst3|clock50to25_pll_0:pll_0                              ; clock50to25.qsys                     ;
+; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|clock50to150:inst9                                                     ; clock50to150.qsys                    ;
+; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|clock50to150:inst9|clock50to150_pll_0:pll_0                            ; clock50to150.qsys                    ;
+; N/A    ; Qsys                         ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0                                       ; D:/snake_clone/snake_de1soc/pll.qsys ;
+; Altera ; altera_avalon_onchip_memory2 ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0 ; D:/snake_clone/snake_de1soc/pll.qsys ;
+; Altera ; altera_pll                   ; 23.1    ; N/A          ; N/A          ; |snake|hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0                       ; D:/snake_clone/snake_de1soc/pll.qsys ;
++--------+------------------------------+---------+--------------+--------------+-------------------------------------------------------------------------------+--------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -2011,7 +2010,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:30     ;
+; Top            ; 00:01:40     ;
 +----------------+--------------+
 
 
@@ -2020,86 +2019,86 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Jan 24 01:01:56 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Sun Jan 26 20:36:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off snake -c snake
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12248): Elaborating Platform Designer system entity "pll.qsys"
-Info (12250): 2025.01.24.01:02:05 Progress: Loading snake_de1soc/pll.qsys
-Info (12250): 2025.01.24.01:02:06 Progress: Reading input file
-Info (12250): 2025.01.24.01:02:06 Progress: Adding clk_0 [clock_source 23.1]
-Info (12250): 2025.01.24.01:02:06 Progress: Parameterizing module clk_0
-Info (12250): 2025.01.24.01:02:06 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 23.1]
-Info (12250): 2025.01.24.01:02:06 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2025.01.24.01:02:06 Progress: Adding pll_0 [altera_pll 23.1]
-Info (12250): 2025.01.24.01:02:07 Progress: Parameterizing module pll_0
-Info (12250): 2025.01.24.01:02:07 Progress: Building connections
-Info (12250): 2025.01.24.01:02:07 Progress: Parameterizing connections
-Info (12250): 2025.01.24.01:02:07 Progress: Validating
-Info (12250): 2025.01.24.01:02:08 Progress: Done reading input file
+Info (12250): 2025.01.26.20:36:28 Progress: Loading snake_de1soc/pll.qsys
+Info (12250): 2025.01.26.20:36:29 Progress: Reading input file
+Info (12250): 2025.01.26.20:36:29 Progress: Adding clk_0 [clock_source 23.1]
+Info (12250): 2025.01.26.20:36:29 Progress: Parameterizing module clk_0
+Info (12250): 2025.01.26.20:36:29 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 23.1]
+Info (12250): 2025.01.26.20:36:29 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2025.01.26.20:36:29 Progress: Adding pll_0 [altera_pll 23.1]
+Info (12250): 2025.01.26.20:36:30 Progress: Parameterizing module pll_0
+Info (12250): 2025.01.26.20:36:30 Progress: Building connections
+Info (12250): 2025.01.26.20:36:30 Progress: Parameterizing connections
+Info (12250): 2025.01.26.20:36:30 Progress: Validating
+Info (12250): 2025.01.26.20:36:34 Progress: Done reading input file
 Info (12250): Pll.pll_0: The legal reference clock frequency is 5.0 MHz..800.0 MHz
 Info (12250): Pll.pll_0: Able to implement PLL with user settings
 Warning (12251): Pll.: You have exported the interface onchip_memory2_0.reset1 but not its associated clock interface.  Export the driver of onchip_memory2_0.clk1
 Warning (12251): Pll.: You have exported the interface onchip_memory2_0.s1 but not its associated clock interface.  Export the driver of onchip_memory2_0.clk1
 Info (12250): Pll: Generating pll "pll" for QUARTUS_SYNTH
 Info (12250): Onchip_memory2_0: Starting RTL generation for module 'pll_onchip_memory2_0'
-Info (12250): Onchip_memory2_0:   Generation command is [exec D:/quartus/quartus/bin64/perl/bin/perl.exe -I D:/quartus/quartus/bin64/perl/lib -I D:/quartus/quartus/sopc_builder/bin/europa -I D:/quartus/quartus/sopc_builder/bin -I D:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I D:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=pll_onchip_memory2_0 --dir=C:/Users/david/AppData/Local/Temp/alt0112_568690367880766028.dir/0002_onchip_memory2_0_gen/ --quartus_dir=D:/quartus/quartus --verilog --config=C:/Users/david/AppData/Local/Temp/alt0112_568690367880766028.dir/0002_onchip_memory2_0_gen//pll_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0:   Generation command is [exec cmd /c {set LC_ALL=C&& C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=pll_onchip_memory2_0 --dir=C:/Users/solma/AppData/Local/Temp/alt0114_291458083771950251.dir/0002_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/solma/AppData/Local/Temp/alt0114_291458083771950251.dir/0002_onchip_memory2_0_gen//pll_onchip_memory2_0_component_configuration.pl --do_build_sim=0}]
 Info (12250): Onchip_memory2_0: Done RTL generation for module 'pll_onchip_memory2_0'
 Info (12250): Onchip_memory2_0: "pll" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info (12250): Pll_0: "pll" instantiated altera_pll "pll_0"
 Info (12250): Pll: Done "pll" with 3 modules, 4 files
 Info (12249): Finished elaborating Platform Designer system entity "pll.qsys"
 Info (12021): Found 2 design units, including 1 entities, in source file i2c.vhd
-    Info (12022): Found design unit 1: i2c-main File: D:/snake_de1SoC/snake_de1soc/i2c.vhd Line: 20
-    Info (12023): Found entity 1: i2c File: D:/snake_de1SoC/snake_de1soc/i2c.vhd Line: 6
+    Info (12022): Found design unit 1: i2c-main File: D:/snake_clone/snake_de1soc/i2c.vhd Line: 20
+    Info (12023): Found entity 1: i2c File: D:/snake_clone/snake_de1soc/i2c.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider50to25.vhd
-    Info (12022): Found design unit 1: clock_divider50to25-bhv File: D:/snake_de1SoC/snake_de1soc/clock_divider50to25.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider50to25 File: D:/snake_de1SoC/snake_de1soc/clock_divider50to25.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider50to25-bhv File: D:/snake_clone/snake_de1soc/clock_divider50to25.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider50to25 File: D:/snake_clone/snake_de1soc/clock_divider50to25.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file aud_gen.vhd
-    Info (12022): Found design unit 1: aud_gen-main File: D:/snake_de1SoC/snake_de1soc/aud_gen.vhd Line: 17
-    Info (12023): Found entity 1: aud_gen File: D:/snake_de1SoC/snake_de1soc/aud_gen.vhd Line: 6
+    Info (12022): Found design unit 1: aud_gen-main File: D:/snake_clone/snake_de1soc/aud_gen.vhd Line: 17
+    Info (12023): Found entity 1: aud_gen File: D:/snake_clone/snake_de1soc/aud_gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file clk50to108/synthesis/clock50to150.vhd
-    Info (12022): Found design unit 1: clock50to150-rtl File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 17
-    Info (12023): Found entity 1: clock50to150 File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 9
+    Info (12022): Found design unit 1: clock50to150-rtl File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 17
+    Info (12023): Found entity 1: clock50to150 File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file clk50to108/synthesis/submodules/clock50to150_pll_0.v
-    Info (12023): Found entity 1: clock50to150_pll_0 File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 2
+    Info (12023): Found entity 1: clock50to150_pll_0 File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file ps2_keyboard.vhd
-    Info (12022): Found design unit 1: ps2_keyboard-logic File: D:/snake_de1SoC/snake_de1soc/ps2_keyboard.vhd Line: 38
-    Info (12023): Found entity 1: ps2_keyboard File: D:/snake_de1SoC/snake_de1soc/ps2_keyboard.vhd Line: 26
+    Info (12022): Found design unit 1: ps2_keyboard-logic File: D:/snake_clone/snake_de1soc/ps2_keyboard.vhd Line: 38
+    Info (12023): Found entity 1: ps2_keyboard File: D:/snake_clone/snake_de1soc/ps2_keyboard.vhd Line: 26
 Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
-    Info (12022): Found design unit 1: debounce-logic File: D:/snake_de1SoC/snake_de1soc/debounce.vhd Line: 36
-    Info (12023): Found entity 1: debounce File: D:/snake_de1SoC/snake_de1soc/debounce.vhd Line: 27
+    Info (12022): Found design unit 1: debounce-logic File: D:/snake_clone/snake_de1soc/debounce.vhd Line: 16
+    Info (12023): Found entity 1: debounce File: D:/snake_clone/snake_de1soc/debounce.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file hw_image_generator.vhd
-    Info (12022): Found design unit 1: hw_image_generator-behavior File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 42
-    Info (12023): Found entity 1: hw_image_generator File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 5
+    Info (12022): Found design unit 1: hw_image_generator-behavior File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 42
+    Info (12023): Found entity 1: hw_image_generator File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clk50to25/synthesis/clock50to25.vhd
-    Info (12022): Found design unit 1: clock50to25-rtl File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 17
-    Info (12023): Found entity 1: clock50to25 File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 9
+    Info (12022): Found design unit 1: clock50to25-rtl File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 17
+    Info (12023): Found entity 1: clock50to25 File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file clk50to25/synthesis/submodules/clock50to25_pll_0.v
-    Info (12023): Found entity 1: clock50to25_pll_0 File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 2
+    Info (12023): Found entity 1: clock50to25_pll_0 File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file snake.bdf
     Info (12023): Found entity 1: snake
 Info (12021): Found 2 design units, including 1 entities, in source file vga_controller.vhd
-    Info (12022): Found design unit 1: vga_controller-behavior File: D:/snake_de1SoC/snake_de1soc/vga_controller.vhd Line: 28
-    Info (12023): Found entity 1: vga_controller File: D:/snake_de1SoC/snake_de1soc/vga_controller.vhd Line: 4
+    Info (12022): Found design unit 1: vga_controller-behavior File: D:/snake_clone/snake_de1soc/vga_controller.vhd Line: 28
+    Info (12023): Found entity 1: vga_controller File: D:/snake_clone/snake_de1soc/vga_controller.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
-    Info (12022): Found design unit 1: clock_divider-bhv File: D:/snake_de1SoC/snake_de1soc/clock_divider.vhd Line: 10
-    Info (12023): Found entity 1: clock_divider File: D:/snake_de1SoC/snake_de1soc/clock_divider.vhd Line: 5
+    Info (12022): Found design unit 1: clock_divider-bhv File: D:/snake_clone/snake_de1soc/clock_divider.vhd Line: 10
+    Info (12023): Found entity 1: clock_divider File: D:/snake_clone/snake_de1soc/clock_divider.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/pll/pll.v
-    Info (12023): Found entity 1: pll File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/pll.v Line: 6
+    Info (12023): Found entity 1: pll File: D:/snake_clone/snake_de1soc/db/ip/pll/pll.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/pll/submodules/pll_onchip_memory2_0.v
-    Info (12023): Found entity 1: pll_onchip_memory2_0 File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 21
+    Info (12023): Found entity 1: pll_onchip_memory2_0 File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/pll/submodules/pll_pll_0.v
-    Info (12023): Found entity 1: pll_pll_0 File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 2
+    Info (12023): Found entity 1: pll_pll_0 File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 2
 Info (12127): Elaborating entity "snake" for the top level hierarchy
 Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:inst100"
 Info (12128): Elaborating entity "clock50to25" for hierarchy "clock50to25:inst3"
-Info (12128): Elaborating entity "clock50to25_pll_0" for hierarchy "clock50to25:inst3|clock50to25_pll_0:pll_0" File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 29
-Info (12128): Elaborating entity "altera_pll" for hierarchy "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
+Info (12128): Elaborating entity "clock50to25_pll_0" for hierarchy "clock50to25:inst3|clock50to25_pll_0:pll_0" File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/clock50to25.vhd Line: 29
+Info (12128): Elaborating entity "altera_pll" for hierarchy "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
-Info (12133): Instantiated megafunction "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
+Info (12130): Elaborated megafunction instantiation "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
+Info (12133): Instantiated megafunction "clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_clone/snake_de1soc/clk50to25/synthesis/submodules/clock50to25_pll_0.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2161,110 +2160,110 @@ Info (12133): Instantiated megafunction "clock50to25:inst3|clock50to25_pll_0:pll
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "hw_image_generator" for hierarchy "hw_image_generator:inst11"
-Warning (10541): VHDL Signal Declaration warning at hw_image_generator.vhd(26): used implicit default value for signal "AUD_ADCLRCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(75): used explicit default value for signal "fruit_width" because signal was never assigned a value File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 75
-Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(76): used explicit default value for signal "fruit_height" because signal was never assigned a value File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 76
-Warning (10036): Verilog HDL or VHDL warning at hw_image_generator.vhd(96): object "WM_i2c_done" assigned a value but never read File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(631): signal "WM_i2c_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 631
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(691): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 691
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(692): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 692
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(696): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 696
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(697): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 697
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(701): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 701
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(702): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 702
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(706): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 706
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(707): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 707
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(711): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 711
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(712): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 712
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(716): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 716
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(717): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 717
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(721): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 721
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(722): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 722
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(726): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 726
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(727): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 727
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(731): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 731
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(732): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 732
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(736): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 736
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(737): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 737
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(741): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 741
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(742): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 742
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(746): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 746
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(747): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 747
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(751): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 751
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(752): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 752
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(756): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 756
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(757): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 757
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(761): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 761
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(762): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 762
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(766): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 766
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(767): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 767
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(771): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 771
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(772): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 772
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(776): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 776
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(777): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 777
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(781): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 781
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(782): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 782
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(786): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 786
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(787): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 787
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(793): signal "fruit_y_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 793
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(793): signal "fruit_height" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 793
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(794): signal "fruit_x_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 794
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(794): signal "fruit_width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 794
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(818): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 818
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(821): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 821
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(822): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 822
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(916): signal "digit1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 916
-Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(934): signal "digit2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 934
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "local_score", which holds its previous value in one or more paths through the process File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "digit1", which holds its previous value in one or more paths through the process File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "digit2", which holds its previous value in one or more paths through the process File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Warning (10873): Using initial value X (don't care) for net "ledr[9..2]" at hw_image_generator.vhd(35) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 35
-Warning (10873): Using initial value X (don't care) for net "ledr[0]" at hw_image_generator.vhd(35) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 35
-Info (10041): Inferred latch for "digit2[0]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit2[1]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit2[2]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit2[3]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit1[0]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit1[1]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit1[2]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "digit1[3]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[0]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[1]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[2]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[3]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[4]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[5]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[6]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[7]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[8]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[9]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[10]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[11]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[12]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[13]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[14]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[15]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[16]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[17]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[18]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[19]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[20]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[21]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[22]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[23]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[24]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[25]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[26]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[27]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[28]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[29]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[30]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (10041): Inferred latch for "local_score[31]" at hw_image_generator.vhd(685) File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 685
-Info (12128): Elaborating entity "pll" for hierarchy "hw_image_generator:inst11|pll:u0" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 426
-Info (12128): Elaborating entity "pll_onchip_memory2_0" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/pll.v Line: 37
-Info (12128): Elaborating entity "altsyncram" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
+Warning (10541): VHDL Signal Declaration warning at hw_image_generator.vhd(26): used implicit default value for signal "AUD_ADCLRCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(75): used explicit default value for signal "fruit_width" because signal was never assigned a value File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 75
+Warning (10540): VHDL Signal Declaration warning at hw_image_generator.vhd(76): used explicit default value for signal "fruit_height" because signal was never assigned a value File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at hw_image_generator.vhd(96): object "WM_i2c_done" assigned a value but never read File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(631): signal "WM_i2c_busy" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 631
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(691): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 691
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(692): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 692
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(696): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 696
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(697): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 697
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(701): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 701
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(702): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 702
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(706): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 706
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(707): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 707
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(711): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 711
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(712): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 712
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(716): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 716
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(717): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 717
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(721): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 721
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(722): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 722
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(726): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 726
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(727): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 727
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(731): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 731
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(732): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 732
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(736): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 736
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(737): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 737
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(741): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 741
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(742): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 742
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(746): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 746
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(747): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 747
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(751): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 751
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(752): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 752
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(756): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 756
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(757): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 757
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(761): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 761
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(762): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 762
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(766): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 766
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(767): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 767
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(771): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 771
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(772): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 772
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(776): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 776
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(777): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 777
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(781): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 781
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(782): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 782
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(786): signal "snake_y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 786
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(787): signal "snake_x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 787
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(793): signal "fruit_y_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 793
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(793): signal "fruit_height" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 793
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(794): signal "fruit_x_start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 794
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(794): signal "fruit_width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 794
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(818): signal "score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 818
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(821): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 821
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(822): signal "local_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 822
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(916): signal "digit1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 916
+Warning (10492): VHDL Process Statement warning at hw_image_generator.vhd(934): signal "digit2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 934
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "local_score", which holds its previous value in one or more paths through the process File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "digit1", which holds its previous value in one or more paths through the process File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Warning (10631): VHDL Process Statement warning at hw_image_generator.vhd(685): inferring latch(es) for signal or variable "digit2", which holds its previous value in one or more paths through the process File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Warning (10873): Using initial value X (don't care) for net "ledr[9..2]" at hw_image_generator.vhd(35) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 35
+Warning (10873): Using initial value X (don't care) for net "ledr[0]" at hw_image_generator.vhd(35) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 35
+Info (10041): Inferred latch for "digit2[0]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit2[1]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit2[2]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit2[3]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit1[0]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit1[1]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit1[2]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "digit1[3]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[0]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[1]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[2]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[3]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[4]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[5]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[6]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[7]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[8]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[9]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[10]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[11]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[12]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[13]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[14]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[15]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[16]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[17]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[18]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[19]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[20]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[21]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[22]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[23]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[24]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[25]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[26]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[27]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[28]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[29]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[30]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (10041): Inferred latch for "local_score[31]" at hw_image_generator.vhd(685) File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 685
+Info (12128): Elaborating entity "pll" for hierarchy "hw_image_generator:inst11|pll:u0" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 426
+Info (12128): Elaborating entity "pll_onchip_memory2_0" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0" File: D:/snake_clone/snake_de1soc/db/ip/pll/pll.v Line: 37
+Info (12128): Elaborating entity "altsyncram" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter: File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
     Info (12134): Parameter "byte_size" = "8"
     Info (12134): Parameter "init_file" = "D:/snake_de1SoC/snake_de1soc/mem.mif"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -2279,19 +2278,20 @@ Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_on
     Info (12134): Parameter "width_byteena_a" = "2"
     Info (12134): Parameter "widthad_a" = "18"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_u3o1.tdf
-    Info (12023): Found entity 1: altsyncram_u3o1 File: D:/snake_de1SoC/snake_de1soc/db/altsyncram_u3o1.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_u3o1" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated" File: d:/quartus/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_u3o1 File: D:/snake_clone/snake_de1soc/db/altsyncram_u3o1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_u3o1" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File D:/snake_de1SoC/snake_de1soc/mem.mif -- setting all initial values to 0 File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_onchip_memory2_0.v Line: 71
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_0na.tdf
-    Info (12023): Found entity 1: decode_0na File: D:/snake_de1SoC/snake_de1soc/db/decode_0na.tdf Line: 23
-Info (12128): Elaborating entity "decode_0na" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|decode_0na:decode3" File: D:/snake_de1SoC/snake_de1soc/db/altsyncram_u3o1.tdf Line: 44
+    Info (12023): Found entity 1: decode_0na File: D:/snake_clone/snake_de1soc/db/decode_0na.tdf Line: 23
+Info (12128): Elaborating entity "decode_0na" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|decode_0na:decode3" File: D:/snake_clone/snake_de1soc/db/altsyncram_u3o1.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_vib.tdf
-    Info (12023): Found entity 1: mux_vib File: D:/snake_de1SoC/snake_de1soc/db/mux_vib.tdf Line: 23
-Info (12128): Elaborating entity "mux_vib" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|mux_vib:mux2" File: D:/snake_de1SoC/snake_de1soc/db/altsyncram_u3o1.tdf Line: 45
-Info (12128): Elaborating entity "pll_pll_0" for hierarchy "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/pll.v Line: 45
-Info (12128): Elaborating entity "altera_pll" for hierarchy "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
+    Info (12023): Found entity 1: mux_vib File: D:/snake_clone/snake_de1soc/db/mux_vib.tdf Line: 23
+Info (12128): Elaborating entity "mux_vib" for hierarchy "hw_image_generator:inst11|pll:u0|pll_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_u3o1:auto_generated|mux_vib:mux2" File: D:/snake_clone/snake_de1soc/db/altsyncram_u3o1.tdf Line: 45
+Info (12128): Elaborating entity "pll_pll_0" for hierarchy "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0" File: D:/snake_clone/snake_de1soc/db/ip/pll/pll.v Line: 45
+Info (12128): Elaborating entity "altera_pll" for hierarchy "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_clone/snake_de1soc/db/ip/pll/submodules/pll_pll_0.v Line: 88
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2352,16 +2352,16 @@ Info (12133): Instantiated megafunction "hw_image_generator:inst11|pll:u0|pll_pl
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "aud_gen" for hierarchy "hw_image_generator:inst11|aud_gen:sound" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 443
-Info (12128): Elaborating entity "i2c" for hierarchy "hw_image_generator:inst11|i2c:WM8731" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 453
+Info (12128): Elaborating entity "aud_gen" for hierarchy "hw_image_generator:inst11|aud_gen:sound" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 443
+Info (12128): Elaborating entity "i2c" for hierarchy "hw_image_generator:inst11|i2c:WM8731" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 453
 Info (12128): Elaborating entity "ps2_keyboard" for hierarchy "ps2_keyboard:inst7"
-Info (12128): Elaborating entity "debounce" for hierarchy "ps2_keyboard:inst7|debounce:debounce_ps2_clk" File: D:/snake_de1SoC/snake_de1soc/ps2_keyboard.vhd Line: 67
+Info (12128): Elaborating entity "debounce" for hierarchy "ps2_keyboard:inst7|debounce:debounce_ps2_clk" File: D:/snake_clone/snake_de1soc/ps2_keyboard.vhd Line: 67
 Info (12128): Elaborating entity "clock50to150" for hierarchy "clock50to150:inst9"
-Info (12128): Elaborating entity "clock50to150_pll_0" for hierarchy "clock50to150:inst9|clock50to150_pll_0:pll_0" File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 29
-Info (12128): Elaborating entity "altera_pll" for hierarchy "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
+Info (12128): Elaborating entity "clock50to150_pll_0" for hierarchy "clock50to150:inst9|clock50to150_pll_0:pll_0" File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/clock50to150.vhd Line: 29
+Info (12128): Elaborating entity "altera_pll" for hierarchy "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
-Info (12133): Instantiated megafunction "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
+Info (12130): Elaborated megafunction instantiation "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
+Info (12133): Instantiated megafunction "clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i" with the following parameter: File: D:/snake_clone/snake_de1soc/clk50to108/synthesis/submodules/clock50to150_pll_0.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2423,53 +2423,53 @@ Info (12133): Instantiated megafunction "clock50to150:inst9|clock50to150_pll_0:p
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:inst"
-Warning (10492): VHDL Process Statement warning at clock_divider.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_de1SoC/snake_de1soc/clock_divider.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at clock_divider.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/snake_clone/snake_de1soc/clock_divider.vhd Line: 29
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod0" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div0" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod1" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 551
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div1" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 551
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod2" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 822
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div2" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 821
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Mod0" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Mod0" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod0" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div0" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod1" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 551
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div1" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 551
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Mod2" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 822
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "hw_image_generator:inst11|Div2" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 821
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Mod0" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Mod0" with the following parameter: File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_uio.tdf
-    Info (12023): Found entity 1: lpm_divide_uio File: D:/snake_de1SoC/snake_de1soc/db/lpm_divide_uio.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_uio File: D:/snake_clone/snake_de1soc/db/lpm_divide_uio.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: D:/snake_de1SoC/snake_de1soc/db/abs_divider_4dg.tdf Line: 27
+    Info (12023): Found entity 1: abs_divider_4dg File: D:/snake_clone/snake_de1soc/db/abs_divider_4dg.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: D:/snake_de1SoC/snake_de1soc/db/alt_u_div_o2f.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_o2f File: D:/snake_clone/snake_de1soc/db/alt_u_div_o2f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
-    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/snake_de1SoC/snake_de1soc/db/lpm_abs_4p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Div0" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Div0" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 550
+    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/snake_clone/snake_de1soc/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Div0" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Div0" with the following parameter: File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 550
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
-    Info (12023): Found entity 1: lpm_divide_bpo File: D:/snake_de1SoC/snake_de1soc/db/lpm_divide_bpo.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_bpo File: D:/snake_clone/snake_de1soc/db/lpm_divide_bpo.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: D:/snake_de1SoC/snake_de1soc/db/abs_divider_kbg.tdf Line: 29
+    Info (12023): Found entity 1: abs_divider_kbg File: D:/snake_clone/snake_de1soc/db/abs_divider_kbg.tdf Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
-    Info (12023): Found entity 1: alt_u_div_ove File: D:/snake_de1SoC/snake_de1soc/db/alt_u_div_ove.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_ove File: D:/snake_clone/snake_de1soc/db/alt_u_div_ove.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
-    Info (12023): Found entity 1: lpm_abs_kn9 File: D:/snake_de1SoC/snake_de1soc/db/lpm_abs_kn9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Mod2" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 822
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Mod2" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 822
+    Info (12023): Found entity 1: lpm_abs_kn9 File: D:/snake_clone/snake_de1soc/db/lpm_abs_kn9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Mod2" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 822
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Mod2" with the following parameter: File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 822
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Div2" File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 821
-Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Div2" with the following parameter: File: D:/snake_de1SoC/snake_de1soc/hw_image_generator.vhd Line: 821
+Info (12130): Elaborated megafunction instantiation "hw_image_generator:inst11|lpm_divide:Div2" File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 821
+Info (12133): Instantiated megafunction "hw_image_generator:inst11|lpm_divide:Div2" with the following parameter: File: D:/snake_clone/snake_de1soc/hw_image_generator.vhd Line: 821
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -2492,13 +2492,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 14 node(s), including 0 DDIO, 4 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/quartus/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/quartus/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance clock50to25:inst3|clock50to25_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/quartus/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance clock50to150:inst9|clock50to150_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i|general[1].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/quartus/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance hw_image_generator:inst11|pll:u0|pll_pll_0:pll_0|altera_pll:altera_pll_i|general[1].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
@@ -2517,10 +2517,10 @@ Info (21057): Implemented 11871 device resources after synthesis - the final res
     Info (21064): Implemented 288 RAM segments
     Info (21065): Implemented 4 PLLs
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
-    Info: Peak virtual memory: 5030 megabytes
-    Info: Processing ended: Fri Jan 24 01:03:44 2025
-    Info: Elapsed time: 00:01:48
-    Info: Total CPU time (on all processors): 00:01:52
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 5048 megabytes
+    Info: Processing ended: Sun Jan 26 20:38:28 2025
+    Info: Elapsed time: 00:02:16
+    Info: Total CPU time (on all processors): 00:02:09
 
 

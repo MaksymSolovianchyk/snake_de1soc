@@ -8,7 +8,7 @@
   </columns>
  </systemtable>
  <library expandedCategories="Project,Library" />
- <window width="1680" height="1010" x="0" y="22" />
+ <window width="1680" height="1010" x="62" y="33" />
  <generation path="D:/snake_de1SoC/snake_de1soc" synthesis="VHDL" />
  <hdlexample language="VHDL" />
 </preferences>
